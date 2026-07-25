@@ -1,0 +1,291 @@
+<p align="center">
+  <img src="./public/assets/logo.svg" alt="Lanchonete Belo Arco-Iris" width="300">
+</p>
+
+<h1 align="center">Lanchonete Belo Arco-Iris</h1>
+
+<p align="center">
+  Site institucional desenvolvido com <strong>React</strong> e <strong>Vite</strong> para apresentar a Lanchonete Belo Arco-Iris, localizada no Jardim da Glória, em São Paulo.
+</p>
+
+<p align="center">
+  <img src="./public/assets/home.png" alt="Preview da página inicial" width="100%">
+</p>
+
+<p align="center">
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![CSS Modules](https://img.shields.io/badge/CSS_Modules-000000?style=for-the-badge&logo=cssmodules&logoColor=white)
+
+</p>
+
+---
+
+# 📖 Sobre o projeto
+
+O **Lanchonete Belo Arco-Iris** é um site institucional desenvolvido para apresentar uma das tradicionais lanchonetes da região do **Jardim da Glória**, em São Paulo.
+
+O projeto foi pensado para oferecer uma experiência simples, moderna e intuitiva, permitindo que os clientes encontrem rapidamente as principais informações da lanchonete, como horários de funcionamento, localização, contato e cardápio.
+
+A identidade visual foi inspirada nas cores do próprio cardápio da lanchonete, utilizando uma paleta clara composta principalmente por **azul**, **branco** e **preto**, transmitindo organização, confiança e profissionalismo.
+
+---
+
+# ✨ Funcionalidades
+
+- 🏠 Página inicial institucional
+- 🍽️ Apresentação da lanchonete
+- ⭐ Seção com diferenciais
+- 🕒 Horário de funcionamento
+- 📖 Página exclusiva para o cardápio
+- 🔍 Visualização ampliada das imagens do cardápio
+- 📄 Download do cardápio em PDF
+- 📍 Localização integrada ao Google Maps
+- ☎️ Informações completas de contato
+- 📱 Layout totalmente responsivo
+- ✨ Animações suaves utilizando Framer Motion
+- ⚡ Navegação rápida entre páginas utilizando React Router
+
+---
+
+# 📄 Páginas
+
+## 🏠 Home
+
+A página inicial apresenta a identidade da lanchonete através de um banner moderno e diversas seções institucionais.
+
+### Conteúdo
+
+- Hero com imagem de fundo
+- Botão para visualizar o cardápio
+- Botão "Como Chegar"
+- Apresentação da lanchonete
+- Diferenciais
+- Horário de funcionamento
+- Chamada para conhecer o cardápio
+
+---
+
+## 📖 Cardápio
+
+Página dedicada ao cardápio oficial da lanchonete.
+
+Recursos disponíveis:
+
+- Cardápio frente
+- Cardápio verso
+- Zoom ao clicar
+- Download em PDF
+
+---
+
+## 📍 Contato
+
+Centraliza todas as informações necessárias para que os clientes possam visitar ou entrar em contato com a lanchonete.
+
+Inclui:
+
+- Endereço completo
+- Telefone
+- Horário de funcionamento
+- Google Maps incorporado
+- Botão "Como Chegar"
+
+---
+
+# 🎨 Design
+
+A identidade visual foi construída seguindo o estilo do cardápio oficial da lanchonete.
+
+### Paleta de cores
+
+- 🔵 Azul (cor principal)
+- ⚪ Branco (fundo)
+- ⚫ Preto (textos)
+- 🔘 Tons suaves de cinza
+
+O objetivo foi transmitir um ambiente moderno, acolhedor e organizado, mantendo a tradição da lanchonete.
+
+---
+
+# 🚀 Tecnologias utilizadas
+
+- React
+- Vite
+- React Router DOM
+- Framer Motion
+- React Icons
+- CSS Modules
+
+---
+
+# 📂 Estrutura do projeto
+
+```text
+src/
+│
+├── assets/
+│   └── logo.svg
+│
+├── components/
+│   ├── About/
+│   ├── CTA/
+│   ├── Differentials/
+│   ├── Footer/
+│   ├── Hero/
+│   ├── Hours/
+│   ├── Lightbox/
+│   ├── Navbar/
+│   ├── PageTransition/
+│   └── ScrollToTop.jsx
+│
+├── pages/
+│   ├── Home/
+│   ├── Menu/
+│   └── Contact/
+│
+├── styles/
+│   ├── global.css
+│   └── tokens.css
+│
+├── App.jsx
+└── main.jsx
+
+public/
+│
+├── assets/
+│   ├── hero-bg.jpg
+│   ├── home.png
+│   ├── about-photo.jpg
+│   ├── cardapio-frente.svg
+│   ├── cardapio-verso.svg
+│   ├── cardapio-belo-arco-iris.pdf
+│   └── favicon.svg
+│
+└── ...
+```
+
+---
+
+# 💻 Como executar o projeto
+
+## Clone o repositório
+
+```bash
+git clone https://github.com/seu-usuario/Lanchonete-Belo-Arco-Iris.git
+```
+
+## Acesse a pasta
+
+```bash
+cd Lanchonete-Belo-Arco-Iris
+```
+
+## Instale as dependências
+
+```bash
+npm install
+```
+
+## Execute o projeto
+
+```bash
+npm run dev
+```
+
+Depois, abra o endereço informado no terminal.
+
+Normalmente:
+
+```text
+http://localhost:5173
+```
+
+---
+
+# 📦 Build de produção
+
+Gerar o build:
+
+```bash
+npm run build
+```
+
+Visualizar o build localmente:
+
+```bash
+npm run preview
+```
+
+---
+
+# 📱 Responsividade
+
+O projeto foi desenvolvido para funcionar perfeitamente em diferentes dispositivos.
+
+Suporte para:
+
+- Desktop
+- Notebook
+- Tablet
+- Smartphone
+
+A interface adapta automaticamente os componentes para diferentes resoluções, incluindo menu hambúrguer em dispositivos móveis.
+
+---
+
+# ⚡ Performance
+
+Durante o desenvolvimento foram adotadas diversas otimizações para garantir uma navegação rápida e fluida.
+
+Entre elas:
+
+- Componentização em React
+- CSS Modules
+- Imagens otimizadas
+- Cardápio em SVG
+- PDF para download
+- Lazy animations
+- Código reutilizável
+- Layout responsivo
+- Navegação otimizada
+
+---
+
+# 📍 Informações da Lanchonete
+
+**Lanchonete Belo Arco-Iris**
+
+📍 Rua Inglês de Sousa, 305  
+Jardim da Glória — São Paulo/SP  
+CEP: 01546-010
+
+☎️ (11) 3539-4944
+
+🕒 Horário de funcionamento
+
+**Segunda à Sexta-feira**
+
+07:00 às 20:00
+
+**Sábado e Domingo**
+
+07:30 às 16:00
+
+---
+
+# 📸 Preview
+
+<p align="center">
+  <img src="./public/assets/home.png" alt="Preview do site" width="100%">
+</p>
+
+---
+
+# 👨‍💻 Desenvolvedor
+
+Desenvolvido por **José Diogo** como um projeto institucional utilizando React e Vite, com foco em performance, responsividade e uma experiência de navegação moderna.
+- José Diogo - https://jose-diogo.vercel.app/

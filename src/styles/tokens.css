@@ -1,0 +1,39 @@
+:root {
+  /* Paleta — azul como cor principal, branco predominante, preto para texto */
+  --color-blue-900: #0b3a75;
+  --color-blue-700: #0f4c92;
+  --color-blue-600: #1b5fc4;
+  --color-blue-500: #2b74e0;
+  --color-blue-100: #e8f1fd;
+  --color-blue-50: #f4f8fe;
+
+  --color-white: #ffffff;
+  --color-black: #1a1a1a;
+  --color-gray-900: #2b2f36;
+  --color-gray-600: #6b7280;
+  --color-gray-300: #e4e6ea;
+  --color-gray-100: #f7f8fa;
+
+  /* Tipografia */
+  --font-display: 'Poppins', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+
+  --fs-hero: clamp(2.1rem, 5vw, 3.4rem);
+  --fs-h2: clamp(1.6rem, 3.2vw, 2.3rem);
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  /* Layout */
+  --max-width: 1160px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --nav-height: 92px;
+
+  --shadow-sm: 0 2px 10px rgba(15, 76, 146, 0.06);
+  --shadow-md: 0 10px 30px rgba(15, 76, 146, 0.12);
+  --shadow-lg: 0 20px 50px rgba(15, 76, 146, 0.18);
+
+  --transition-base: 0.25s ease;
+}

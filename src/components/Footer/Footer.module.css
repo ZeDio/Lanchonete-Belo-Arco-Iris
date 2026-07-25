@@ -1,0 +1,81 @@
+.footer {
+  position: relative;
+  background:
+    linear-gradient(120deg, rgba(11, 58, 117, 0.95) 0%, rgba(15, 76, 146, 0.92) 100%),
+    url('/assets/hero-bg.jpg') center / cover no-repeat;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 56px 0 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brandTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-white);
+}
+
+.brandText {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.92rem;
+  max-width: 320px;
+}
+
+.colTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-white);
+  margin-bottom: 14px;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 10px;
+}
+
+.row svg {
+  margin-top: 3px;
+  flex-shrink: 0;
+  color: var(--color-blue-500);
+}
+
+.bottom {
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

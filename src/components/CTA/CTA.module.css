@@ -1,0 +1,16 @@
+.wrap {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.text {
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+}
