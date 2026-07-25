@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/assets/logo.svg" alt="Lanchonete Belo Arco-Iris" width="300">
+  <img src="./src/assets/logo.svg" alt="Lanchonete Belo Arco-Iris" width="300">
 </p>
 
 <h1 align="center">Lanchonete Belo Arco-Iris</h1>
