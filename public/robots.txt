@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://lanchonete-belo-arco-iris.vercel.app/sitemap.xml
