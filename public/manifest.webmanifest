@@ -1,16 +1,29 @@
 {
   "name": "Lanchonete Belo Arco-Iris",
   "short_name": "Belo Arco-Iris",
-  "description": "Pratos feitos, cafés e refeições caseiras.",
-  "theme_color": "#1B5FC4",
-  "background_color": "#ffffff",
-  "display": "standalone",
+  "description": "Site oficial da Lanchonete Belo Arco-Iris. Pratos feitos, cafés e refeições caseiras no Jardim da Glória, São Paulo.",
+  "lang": "pt-BR",
   "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#1B5FC4",
+  "categories": [
+    "food",
+    "restaurant",
+    "business"
+  ],
   "icons": [
     {
       "src": "/assets/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/assets/favicon-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
     }
   ]
 }
