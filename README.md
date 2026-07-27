@@ -289,3 +289,49 @@ CEP: 01546-010
 
 Desenvolvido por **José Diogo** como um projeto institucional utilizando React e Vite, com foco em performance, responsividade e uma experiência de navegação moderna.
 - José Diogo - https://jose-diogo.vercel.app/
+
+---
+
+# 🧾 Cardápio em JSON
+
+Todo o conteúdo do cardápio (pratos feitos, comerciais, pratos do dia, lanches, bebidas e porções) agora vive em `src/data/menu.json` — não é mais só a imagem escaneada, cada item existe como dado e é renderizado direto na página `/cardapio`.
+
+**Como adicionar os preços:** abra `src/data/menu.json` e preencha o campo `price` de cada item com um número (ex.: `19.9`). Enquanto o campo estiver como `null`, o site mostra um travessão (`—`) no lugar do preço.
+
+Estrutura do arquivo:
+
+```json
+{
+  "categories": [
+    {
+      "id": "pratos-feitos",
+      "title": "Pratos Feitos",
+      "items": [
+        { "name": "Picanha, Ovo, Arroz, Fritas e Salada", "price": null }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "title": "Bebidas",
+      "subcategories": [
+        { "title": "Sucos", "items": [ { "name": "Laranja", "price": null } ] }
+      ]
+    },
+    {
+      "id": "pratos-do-dia",
+      "title": "Pratos do Dia",
+      "days": [
+        { "day": "Segunda-Feira", "items": [ { "name": "Picadinho", "price": null } ] }
+      ]
+    }
+  ]
+}
+```
+
+- Categorias simples (Pratos Feitos, Comerciais, Lanches, Porções) usam `items`.
+- **Bebidas** usa `subcategories` (Sucos / Refrigerantes e outras bebidas) para separar os grupos.
+- **Pratos do Dia** usa `days`, um array com o item do dia da semana.
+
+Para adicionar um item novo, é só copiar o formato `{ "name": "...", "price": null }` dentro da categoria certa. Não precisa mexer em nenhum componente React — a página lê o JSON automaticamente e monta a seção, o menu de atalhos no topo e a formatação do preço (`R$ 19,90`).
+
+As imagens originais do cardápio e o PDF continuam disponíveis mais abaixo na página, para quem preferir ver a arte tal como impressa.

@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
             <div className={styles.row}>
               <FaClock />
-              <span>Sábado e Domingo — 07:30 às 16:00</span>
+              <span>Sábado e Domingo — 07:30 às 15:00</span>
             </div>
           </div>
         </div>

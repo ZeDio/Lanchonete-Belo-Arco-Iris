@@ -3,12 +3,31 @@ import { motion } from 'framer-motion'
 import { FaSearchPlus, FaFilePdf } from 'react-icons/fa'
 import PageTransition from '../../components/PageTransition/PageTransition.jsx'
 import Lightbox from '../../components/Lightbox/Lightbox.jsx'
+import menuData from '../../data/menu.json'
 import styles from './Menu.module.css'
 
 const PAGES = [
   { src: '/assets/cardapio-frente.svg', alt: 'Cardápio Belo Arco-Íris — página 1' },
   { src: '/assets/cardapio-verso.svg', alt: 'Cardápio Belo Arco-Íris — página 2' },
 ]
+
+function formatPrice(price) {
+  if (price === null || price === undefined) return '—'
+  return `R$ ${Number(price).toFixed(2).replace('.', ',')}`
+}
+
+function ItemRow({ item }) {
+  const isPending = item.price === null || item.price === undefined
+  return (
+    <div className={styles.itemRow}>
+      <span className={styles.itemName}>{item.name}</span>
+      <span className={styles.itemDots} aria-hidden="true" />
+      <span className={`${styles.itemPrice} ${isPending ? styles.pending : ''}`}>
+        {formatPrice(item.price)}
+      </span>
+    </div>
+  )
+}
 
 export default function Menu() {
   const [active, setActive] = useState(null)
@@ -24,60 +43,125 @@ export default function Menu() {
 
       <section className="section">
         <div className="container">
-          <div className={styles.grid}>
-            {PAGES.map((page, i) => (
-              <motion.div
-                key={page.src}
-                className={styles.card}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
-              >
-                <button
-                  className={styles.imgButton}
-                  onClick={() => setActive(page)}
-                  aria-label={`Ampliar ${page.alt}`}
-                >
-                  <img src={page.src} alt={page.alt} loading="lazy" />
-                </button>
-                <div className={styles.imgLabel}>
-                  <FaSearchPlus style={{ marginRight: 6, verticalAlign: -2 }} />
-                  {page.alt}
-                </div>
-                <div className={styles.zoomHint}>Clique para ampliar</div>
-              </motion.div>
+          <nav className={styles.quickNav} aria-label="Categorias do cardápio">
+            {menuData.categories.map((cat) => (
+              <a key={cat.id} href={`#${cat.id}`} className={styles.navChip}>
+                {cat.title}
+              </a>
             ))}
-          </div>
+          </nav>
 
-          <motion.div
-            className={styles.downloadSection}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-          >
-            <div className={styles.downloadCard}>
-              <div className={styles.downloadText}>
-                <h3>
-                  <FaFilePdf style={{ marginRight: 8, verticalAlign: -2, color: 'var(--color-blue-600)' }} />
-                  Baixe o cardápio em PDF
-                </h3>
-                <p>
-                  Prefere guardar no celular? Baixe o cardápio completo em PDF e consulte
-                  offline sempre que quiser.
-                </p>
-                <a
-                  href="/assets/cardapio-belo-arco-iris.pdf"
-                  download="cardapio-belo-arco-iris.pdf"
-                  className="btn btn--primary"
-                >
-                  <FaFilePdf />
-                  Baixar PDF
-                </a>
+          {menuData.categories.map((cat, ci) => (
+            <motion.div
+              key={cat.id}
+              id={cat.id}
+              className={styles.categorySection}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: (ci % 3) * 0.06, ease: 'easeOut' }}
+            >
+              <div className={styles.categoryHeader}>
+                <span className={styles.categoryTitle}>{cat.title}</span>
               </div>
+
+              {cat.items && (
+                <div className={styles.itemsGrid}>
+                  {cat.items.map((item) => (
+                    <ItemRow key={item.name} item={item} />
+                  ))}
+                </div>
+              )}
+
+              {cat.subcategories &&
+                cat.subcategories.map((sub) => (
+                  <div key={sub.title}>
+                    <div className={styles.subcategoryTitle}>{sub.title}</div>
+                    <div className={styles.itemsGrid}>
+                      {sub.items.map((item) => (
+                        <ItemRow key={item.name} item={item} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+
+              {cat.days && (
+                <div className={styles.dayGrid}>
+                  {cat.days.map((d) => (
+                    <div key={d.day} className={styles.dayCard}>
+                      <div className={styles.dayTitle}>{d.day}</div>
+                      {d.items.map((item) => (
+                        <ItemRow key={item.name} item={item} />
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          ))}
+
+          <div className={styles.originalSection}>
+            <div className={styles.originalHeading}>
+              <span className="eyebrow">Cardápio original</span>
+              <h2>Prefere ver a arte completa?</h2>
+              <p>Veja as páginas originais do cardápio impresso ou baixe em PDF.</p>
             </div>
-          </motion.div>
+
+            <div className={styles.grid}>
+              {PAGES.map((page, i) => (
+                <motion.div
+                  key={page.src}
+                  className={styles.card}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
+                >
+                  <button
+                    className={styles.imgButton}
+                    onClick={() => setActive(page)}
+                    aria-label={`Ampliar ${page.alt}`}
+                  >
+                    <img src={page.src} alt={page.alt} loading="lazy" />
+                  </button>
+                  <div className={styles.imgLabel}>
+                    <FaSearchPlus style={{ marginRight: 6, verticalAlign: -2 }} />
+                    {page.alt}
+                  </div>
+                  <div className={styles.zoomHint}>Clique para ampliar</div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              className={styles.downloadSection}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            >
+              <div className={styles.downloadCard}>
+                <div className={styles.downloadText}>
+                  <h3>
+                    <FaFilePdf style={{ marginRight: 8, verticalAlign: -2, color: 'var(--color-blue-600)' }} />
+                    Baixe o cardápio em PDF
+                  </h3>
+                  <p>
+                    Prefere guardar no celular? Baixe o cardápio completo em PDF e consulte
+                    offline sempre que quiser.
+                  </p>
+                  <a
+                    href="/assets/cardapio-belo-arco-iris.pdf"
+                    download="cardapio-belo-arco-iris.pdf"
+                    className="btn btn--primary"
+                  >
+                    <FaFilePdf />
+                    Baixar PDF
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

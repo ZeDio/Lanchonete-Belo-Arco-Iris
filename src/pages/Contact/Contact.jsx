@@ -87,7 +87,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className={styles.infoLabel}>Sábado e Domingo</div>
-                  <div className={styles.infoValue}>07:30 às 16:00</div>
+                  <div className={styles.infoValue}>07:30 às 15:00</div>
                 </div>
               </div>
             </motion.div>

@@ -1,0 +1,103 @@
+.section {
+  padding: 48px 0 8px;
+}
+
+.wrap {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, var(--color-blue-700), var(--color-blue-600));
+  border-radius: var(--radius-lg);
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  box-shadow: var(--shadow-md);
+}
+
+.ring {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 40px solid rgba(255, 255, 255, 0.08);
+  right: -80px;
+  bottom: -140px;
+}
+
+.iconWrap {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 6px;
+}
+
+.dishList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+
+.dishItem {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-white);
+}
+
+.dishPrice {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-left: 8px;
+}
+
+.action {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 32px 0 4px;
+  }
+
+  .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+  }
+
+  .action {
+    width: 100%;
+  }
+
+  .action .btn {
+    width: 100%;
+  }
+}
