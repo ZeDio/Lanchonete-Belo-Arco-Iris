@@ -356,14 +356,16 @@ Ferramentas online como [squoosh.app](https://squoosh.app) fazem isso de graça,
 
 **Botão flutuante:** o "Ver com fotos" agora fica fixo no canto inferior direito da tela, sobre o conteúdo, e continua acessível mesmo rolando a página.
 
+**Nova categoria "Porções à Parte":** adicionada logo abaixo de Comerciais no `menu.json` (Arroz, Feijão, Batata Frita Pequena e Salada), já com fotos. Os preços ficaram como `null` — é só preencher quando definir os valores.
+
 ## 🖼️ Carrossel do salão (Home)
 
-A foto ao lado de "Sobre a Lanchonete" na Home virou um carrossel automático (`src/components/Carousel`), alimentado por `src/data/salao.json`. Ele passa as fotos sozinho a cada ~4,5s, mas também dá pra navegar pelas setas ou pelos pontinhos.
+A foto ao lado de "Sobre a Lanchonete" na Home virou um carrossel automático (`src/components/Carousel`), alimentado por `src/data/fotosDoEstabelecimento.json`. Ele passa as fotos sozinho a cada ~4,5s, mas também dá pra navegar pelas setas ou pelos pontinhos.
 
 **Para adicionar mais fotos do salão** (por exemplo, amanhã):
 
 1. Salve o arquivo em `public/assets/salao/salao-3.jpg` (siga a numeração).
-2. Adicione uma entrada em `src/data/salao.json`:
+2. Adicione uma entrada em `src/data/fotosDoEstabelecimento.json`:
    ```json
    { "src": "/assets/salao/salao-3.jpg", "alt": "Descrição da foto" }
    ```

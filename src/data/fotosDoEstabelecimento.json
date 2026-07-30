@@ -1,6 +1,10 @@
 {
   "photos": [
     {
+      "src": "/assets/salao/salao-0-entrada.jpg",
+      "alt": "Fachada da Lanchonete Belo Arco-Íris"
+    },
+    {
       "src": "/assets/salao/salao-1.jpg",
       "alt": "Salão interno da Lanchonete Belo Arco-Íris"
     },

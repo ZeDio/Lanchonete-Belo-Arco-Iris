@@ -6,11 +6,13 @@
       "items": [
         {
           "name": "Picanha, Ovo, Arroz, Fritas e Salada",
-          "price": 36.0
+          "price": 36.0,
+          "image": "/assets/menu/picanha-prato-feito.jpg"
         },
         {
           "name": "Omelete, Arroz, Feijão, Fritas e Salada",
-          "price": 22.0
+          "price": 22.0,
+          "image": "/assets/menu/omelete-prato-feito.jpg"
         },
         {
           "name": "Filé de Frango, Ovo, Arroz, Fritas e Salada",
@@ -39,7 +41,8 @@
         },
         {
           "name": "Parmegiana, Arroz e Fritas",
-          "price": 36.0
+          "price": 36.0,
+          "image": "/assets/menu/parmegiana-prato-feito.jpg"
         },
         {
           "name": "Costela, Arroz, Feijão e Salada",
@@ -61,11 +64,13 @@
         },
         {
           "name": "Contra Filé, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 28.0
+          "price": 28.0,
+          "image": "/assets/menu/contra-file-comercial.jpg"
         },
         {
           "name": "Chuleta, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 36.0
+          "price": 36.0,
+          "image": "/assets/menu/chuleta-comercial.jpg"
         },
         {
           "name": "Filé De Frango, Ovo, Arroz, Feijão, Fritas e Salada",
@@ -146,11 +151,13 @@
           "items": [
             {
               "name": "Frango com Macarrão",
-              "price": 25.0
+              "price": 25.0,
+              "image": "/assets/menu/frango-macarrao.jpg"
             },
             {
               "name": "Panqueca de Carne",
-              "price": 26.0
+              "price": 26.0,
+              "image": "/assets/menu/panqueca-de-carne.jpg"
             }
           ]
         },
@@ -420,6 +427,32 @@
         {
           "name": "Batata",
           "price": 55.0
+        }
+      ]
+    },
+    {
+      "id": "porcoes-a-parte",
+      "title": "Porções à Parte",
+      "items": [
+        {
+          "name": "Arroz",
+          "price": 6.00,
+          "image": "/assets/menu/arroz-a-parte.jpg"
+        },
+        {
+          "name": "Feijão",
+          "price": 6.00,
+          "image": "/assets/menu/feijao-a-parte.jpg"
+        },
+        {
+          "name": "Batata Frita Pequena",
+          "price": 10.00,
+          "image": "/assets/menu/batata-frita-pequena-a-parte.jpg"
+        },
+        {
+          "name": "Salada",
+          "price": 6.00,
+          "image": "/assets/menu/salada-a-parte.jpg"
         }
       ]
     }
