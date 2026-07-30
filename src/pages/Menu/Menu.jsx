@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaSearchPlus, FaFilePdf } from 'react-icons/fa'
+import { FaSearchPlus, FaFilePdf, FaImage } from 'react-icons/fa'
 import PageTransition from '../../components/PageTransition/PageTransition.jsx'
 import Lightbox from '../../components/Lightbox/Lightbox.jsx'
 import menuData from '../../data/menu.json'
@@ -16,8 +16,23 @@ function formatPrice(price) {
   return `R$ ${Number(price).toFixed(2).replace('.', ',')}`
 }
 
-function ItemRow({ item }) {
+function ItemRow({ item, showPhotos }) {
   const isPending = item.price === null || item.price === undefined
+
+  if (showPhotos && item.image) {
+    return (
+      <div className={styles.itemRowPhoto}>
+        <img src={item.image} alt={item.name} className={styles.itemPhoto} loading="lazy" />
+        <div className={styles.itemPhotoText}>
+          <span className={styles.itemName}>{item.name}</span>
+          <span className={`${styles.itemPrice} ${isPending ? styles.pending : ''}`}>
+            {formatPrice(item.price)}
+          </span>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className={styles.itemRow}>
       <span className={styles.itemName}>{item.name}</span>
@@ -31,9 +46,11 @@ function ItemRow({ item }) {
 
 export default function Menu() {
   const [active, setActive] = useState(null)
+  const [showPhotos, setShowPhotos] = useState(false)
 
   return (
-    <PageTransition>
+    <>
+      <PageTransition>
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.title}>Nosso Cardápio</h1>
@@ -68,7 +85,7 @@ export default function Menu() {
               {cat.items && (
                 <div className={styles.itemsGrid}>
                   {cat.items.map((item) => (
-                    <ItemRow key={item.name} item={item} />
+                    <ItemRow key={item.name} item={item} showPhotos={showPhotos} />
                   ))}
                 </div>
               )}
@@ -79,7 +96,7 @@ export default function Menu() {
                     <div className={styles.subcategoryTitle}>{sub.title}</div>
                     <div className={styles.itemsGrid}>
                       {sub.items.map((item) => (
-                        <ItemRow key={item.name} item={item} />
+                        <ItemRow key={item.name} item={item} showPhotos={showPhotos} />
                       ))}
                     </div>
                   </div>
@@ -91,7 +108,7 @@ export default function Menu() {
                     <div key={d.day} className={styles.dayCard}>
                       <div className={styles.dayTitle}>{d.day}</div>
                       {d.items.map((item) => (
-                        <ItemRow key={item.name} item={item} />
+                        <ItemRow key={item.name} item={item} showPhotos={showPhotos} />
                       ))}
                     </div>
                   ))}
@@ -164,10 +181,26 @@ export default function Menu() {
           </div>
         </div>
       </section>
+      </PageTransition>
+
+      <button
+        type="button"
+        role="switch"
+        aria-checked={showPhotos}
+        aria-label="Ver cardápio com fotos"
+        className={`${styles.floatingToggle} ${showPhotos ? styles.floatingToggleOn : ''}`}
+        onClick={() => setShowPhotos((v) => !v)}
+      >
+        <FaImage />
+        <span className={styles.floatingToggleLabel}>Ver com fotos</span>
+        <span className={styles.switchTrack}>
+          <span className={styles.switchThumb} />
+        </span>
+      </button>
 
       {active && (
         <Lightbox src={active.src} alt={active.alt} onClose={() => setActive(null)} />
       )}
-    </PageTransition>
+    </>
   )
 }

@@ -273,7 +273,7 @@ CEP: 01546-010
 
 **Sábado e Domingo**
 
-07:30 às 16:00
+07:30 às 15:00
 
 ---
 
@@ -335,3 +335,38 @@ Estrutura do arquivo:
 Para adicionar um item novo, é só copiar o formato `{ "name": "...", "price": null }` dentro da categoria certa. Não precisa mexer em nenhum componente React — a página lê o JSON automaticamente e monta a seção, o menu de atalhos no topo e a formatação do preço (`R$ 19,90`).
 
 As imagens originais do cardápio e o PDF continuam disponíveis mais abaixo na página, para quem preferir ver a arte tal como impressa.
+
+## 📸 Fotos dos pratos
+
+Qualquer item do JSON pode ganhar uma foto adicionando o campo `"image"` com o caminho do arquivo, por exemplo:
+
+```json
+{ "name": "Feijoada Prato Feito", "price": 35.00, "image": "/assets/menu/feijoada-prato-feito.jpg" }
+```
+
+As fotos ficam em `public/assets/menu/`. Na página do Cardápio existe um botão **"Ver com fotos"** — quando desligado (padrão), o cardápio aparece exatamente como antes, só texto e preço; quando ligado, todo item que tiver o campo `image` passa a mostrar a foto ao lado do nome. Itens sem foto continuam aparecendo normalmente mesmo com o botão ligado.
+
+**Para adicionar novas fotos**, salve o arquivo em `public/assets/menu/nome-do-prato.jpg` e recomendo otimizá-la antes (fotos de celular costumam vir muito grandes, 3-5MB, o que deixa o site lento). Um jeito rápido:
+
+- Redimensione para no máximo ~900px de largura (não precisa de mais que isso para o tamanho exibido no site).
+- Recorte em proporção 4:3, se possível, para ficar do mesmo tamanho das outras fotos.
+- Salve como `.jpg` com qualidade em torno de 75-80% — isso normalmente reduz o arquivo de alguns MB para menos de 100KB sem perda visível de qualidade.
+
+Ferramentas online como [squoosh.app](https://squoosh.app) fazem isso de graça, sem precisar instalar nada — ou me manda a foto que eu otimizo e já devolvo pronta pra colocar no `menu.json`.
+
+**Botão flutuante:** o "Ver com fotos" agora fica fixo no canto inferior direito da tela, sobre o conteúdo, e continua acessível mesmo rolando a página.
+
+## 🖼️ Carrossel do salão (Home)
+
+A foto ao lado de "Sobre a Lanchonete" na Home virou um carrossel automático (`src/components/Carousel`), alimentado por `src/data/salao.json`. Ele passa as fotos sozinho a cada ~4,5s, mas também dá pra navegar pelas setas ou pelos pontinhos.
+
+**Para adicionar mais fotos do salão** (por exemplo, amanhã):
+
+1. Salve o arquivo em `public/assets/salao/salao-3.jpg` (siga a numeração).
+2. Adicione uma entrada em `src/data/salao.json`:
+   ```json
+   { "src": "/assets/salao/salao-3.jpg", "alt": "Descrição da foto" }
+   ```
+3. Só isso — o carrossel detecta a nova foto automaticamente, não precisa mexer em nenhum componente.
+
+Vale a mesma dica de otimização das fotos do cardápio: reduza pra no máximo ~1400px de largura e salve em `.jpg` com qualidade 75-80% antes de subir, senão fotos de celular (que costumam vir com vários MB) deixam o carregamento do site mais lento. Se preferir, me manda as fotos direto que eu já devolvo otimizadas.

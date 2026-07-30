@@ -272,3 +272,119 @@
     margin-top: -24px;
   }
 }
+
+/* ---- Botão flutuante "Ver com fotos" ---- */
+
+.floatingToggle {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--color-gray-300);
+  background: var(--color-white);
+  color: var(--color-gray-900);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base), color var(--transition-base);
+}
+
+.floatingToggle:hover {
+  transform: translateY(-2px);
+}
+
+.floatingToggle.floatingToggleOn {
+  background: var(--color-blue-700);
+  color: var(--color-white);
+  border-color: var(--color-blue-700);
+}
+
+.floatingToggleLabel {
+  white-space: nowrap;
+}
+
+.switchTrack {
+  position: relative;
+  display: inline-flex;
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  background: rgba(107, 114, 128, 0.35);
+  flex-shrink: 0;
+  transition: background var(--transition-base);
+}
+
+.floatingToggleOn .switchTrack {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.switchThumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base);
+}
+
+.floatingToggleOn .switchThumb {
+  transform: translateX(18px);
+}
+
+@media (max-width: 560px) {
+  .floatingToggle {
+    right: 16px;
+    bottom: 16px;
+    padding: 12px 16px;
+  }
+
+  .floatingToggleLabel {
+    display: none;
+  }
+}
+
+/* ---- Item com foto ---- */
+
+.itemRowPhoto {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  margin: 4px 0;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+}
+
+.itemPhoto {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.itemPhotoText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.itemPhotoText .itemName {
+  font-weight: 500;
+}
+
+.itemPhotoText .itemPrice {
+  font-size: 1rem;
+}

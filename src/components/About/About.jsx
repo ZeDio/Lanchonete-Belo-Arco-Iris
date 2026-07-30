@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import Carousel from '../Carousel/Carousel.jsx'
+import fotosDoEstabelecimentoData from '../../data/fotosDoEstabelecimento.json'
 import styles from './About.module.css'
 
 export default function About() {
@@ -13,12 +15,7 @@ export default function About() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            <img
-              src="/assets/about-photo.jpg"
-              alt="Pratos caseiros preparados na Lanchonete Belo Arco-Íris"
-              className={styles.visualImg}
-              loading="lazy"
-            />
+            <Carousel photos={fotosDoEstabelecimentoData.photos} />
             <div className={styles.badge}>
               <span className={styles.badgeValue}>R$20–45</span>
               <span className={styles.badgeLabel}>ticket médio por refeição</span>

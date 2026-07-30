@@ -4,34 +4,101 @@
       "id": "pratos-feitos",
       "title": "Pratos Feitos",
       "items": [
-        { "name": "Picanha, Ovo, Arroz, Fritas e Salada", "price": 36.00 },
-        { "name": "Omelete, Arroz, Feijão, Fritas e Salada", "price": 22.00 },
-        { "name": "Filé de Frango, Ovo, Arroz, Fritas e Salada", "price": 20.00 },
-        { "name": "Filé de Frango, Ovo, Arroz, Feijão, Fritas, Farofa e Salada", "price": 23.00 },
-        { "name": "Frango Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada", "price": 24.00 },
-        { "name": "Contra Filé, Ovo, Arroz, Feijão, Fritas e Salada", "price": 25.00 },
-        { "name": "Calabresa Fresca, Ovo, Arroz, Feijão, Fritas e Salada", "price": 25.00 },
-        { "name": "Calabresa Defumada, Ovo, Arroz, Feijão, Fritas e Salada", "price": 25.00 },
-        { "name": "Parmegiana, Arroz e Fritas", "price": 36.00 },
-        { "name": "Costela, Arroz, Feijão e Salada", "price": 25.00 }
+        {
+          "name": "Picanha, Ovo, Arroz, Fritas e Salada",
+          "price": 36.0
+        },
+        {
+          "name": "Omelete, Arroz, Feijão, Fritas e Salada",
+          "price": 22.0
+        },
+        {
+          "name": "Filé de Frango, Ovo, Arroz, Fritas e Salada",
+          "price": 20.0
+        },
+        {
+          "name": "Filé de Frango, Ovo, Arroz, Feijão, Fritas, Farofa e Salada",
+          "price": 23.0,
+          "image": "/assets/menu/file-frango-com-feijao.jpg"
+        },
+        {
+          "name": "Frango Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 24.0
+        },
+        {
+          "name": "Contra Filé, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 25.0
+        },
+        {
+          "name": "Calabresa Fresca, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 25.0
+        },
+        {
+          "name": "Calabresa Defumada, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 25.0
+        },
+        {
+          "name": "Parmegiana, Arroz e Fritas",
+          "price": 36.0
+        },
+        {
+          "name": "Costela, Arroz, Feijão e Salada",
+          "price": 25.0
+        }
       ]
     },
     {
       "id": "comerciais",
       "title": "Comerciais",
       "items": [
-        { "name": "Parmegiana, Arroz, Feijão, Fritas e Salada", "price": 46.00 },
-        { "name": "Picanha, Ovo, Arroz, Feijão, Fritas e Salada", "price": 48.00 },
-        { "name": "Contra Filé, Ovo, Arroz, Feijão, Fritas e Salada", "price": 28.00 },
-        { "name": "Chuleta, Ovo, Arroz, Feijão, Fritas e Salada", "price": 36.00 },
-        { "name": "Filé De Frango, Ovo, Arroz, Feijão, Fritas e Salada", "price": 25.00 },
-        { "name": "Calabresa Fresca, Ovo, Arroz, Feijão, Fritas e Salada", "price": 25.00 },
-        { "name": "Calabresa Defumada, Ovo, Arroz, Feijão, Fritas e Salada", "price": 25.00 },
-        { "name": "Bife Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada", "price": 32.00 },
-        { "name": "Frango Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada", "price": 28.00 },
-        { "name": "Omelete, Arroz, Feijão, Fritas e Salada", "price": 25.00 },
-        { "name": "Viagem, acréscimo de", "price": 2.00 },
-        { "name": "Para duas pessoas, acréscimo de", "price": 4.00 }
+        {
+          "name": "Parmegiana, Arroz, Feijão, Fritas e Salada",
+          "price": 46.0
+        },
+        {
+          "name": "Picanha, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 48.0
+        },
+        {
+          "name": "Contra Filé, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 28.0
+        },
+        {
+          "name": "Chuleta, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 36.0
+        },
+        {
+          "name": "Filé De Frango, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 25.0
+        },
+        {
+          "name": "Calabresa Fresca, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 25.0
+        },
+        {
+          "name": "Calabresa Defumada, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 25.0
+        },
+        {
+          "name": "Bife Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 32.0
+        },
+        {
+          "name": "Frango Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 28.0
+        },
+        {
+          "name": "Omelete, Arroz, Feijão, Fritas e Salada",
+          "price": 25.0
+        },
+        {
+          "name": "Viagem, acréscimo de",
+          "price": 2.0
+        },
+        {
+          "name": "Para duas pessoas, acréscimo de",
+          "price": 4.0
+        }
       ]
     },
     {
@@ -41,42 +108,77 @@
         {
           "day": "Segunda-Feira",
           "items": [
-            { "name": "Costela com Mandioca", "price": 25.00 },
-            { "name": "Picadinho", "price": 25.00 }
+            {
+              "name": "Costela com Mandioca",
+              "price": 25.0
+            },
+            {
+              "name": "Picadinho",
+              "price": 25.0
+            }
           ]
         },
         {
           "day": "Terça-Feira",
           "items": [
-            { "name": "Bife a Rolê com Purê", "price": 28.00 }
+            {
+              "name": "Bife a Rolê com Purê",
+              "price": 28.0
+            }
           ]
         },
         {
           "day": "Quarta-Feira",
           "items": [
-            { "name": "Feijoada Média", "price": 55.00 },
-            { "name": "Feijoada Prato Feito", "price": 35.00 }
+            {
+              "name": "Feijoada Média",
+              "price": 55.0
+            },
+            {
+              "name": "Feijoada Prato Feito",
+              "price": 35.0,
+              "image": "/assets/menu/feijoada-prato-feito.jpg"
+            }
           ]
         },
         {
           "day": "Quinta-Feira",
           "items": [
-            { "name": "Frango com Macarrão", "price": 25.00 },
-            { "name": "Panqueca de Carne", "price": 26.00 }
+            {
+              "name": "Frango com Macarrão",
+              "price": 25.0
+            },
+            {
+              "name": "Panqueca de Carne",
+              "price": 26.0
+            }
           ]
         },
         {
           "day": "Sexta-Feira",
           "items": [
-            { "name": "Peixe à Milanesa", "price": 26.00 },
-            { "name": "Frango a Passarinho", "price": 25.00 }
+            {
+              "name": "Peixe à Milanesa",
+              "price": 26.0
+            },
+            {
+              "name": "Frango a Passarinho",
+              "price": 25.0
+            }
           ]
         },
         {
           "day": "Sábado",
           "items": [
-            { "name": "Feijoada Média", "price": 55.00 },
-            { "name": "Feijoada Prato Feito", "price": 35.00 }
+            {
+              "name": "Feijoada Média",
+              "price": 55.0
+            },
+            {
+              "name": "Feijoada Prato Feito",
+              "price": 35.0,
+              "image": "/assets/menu/feijoada-prato-feito.jpg"
+            }
           ]
         }
       ]
@@ -85,21 +187,66 @@
       "id": "lanches",
       "title": "Lanches",
       "items": [
-        { "name": "X-Tudo", "price": 32.00 },
-        { "name": "X-Salada", "price": 20.00 },
-        { "name": "X-Bacon", "price": 20.00 },
-        { "name": "X-Egg", "price": 20.00 },
-        { "name": "X-Maionese", "price": 16.00 },
-        { "name": "X-Burger", "price": 16.00 },
-        { "name": "X-Calabresa", "price": 18.00 },
-        { "name": "X-Frango", "price": 20.00 },
-        { "name": "Churrasco com Queijo", "price": 24.00 },
-        { "name": "Americano", "price": 18.00 },
-        { "name": "Bauru", "price": 14.00 },
-        { "name": "Misto Quente", "price": 14.00 },
-        { "name": "Misto Frio", "price": 14.00 },
-        { "name": "Pão com Ovo", "price": 10.00 },
-        { "name": "Pão com Ovo e Queijo", "price": 16.00 }
+        {
+          "name": "X-Tudo",
+          "price": 32.0
+        },
+        {
+          "name": "X-Salada",
+          "price": 20.0
+        },
+        {
+          "name": "X-Bacon",
+          "price": 20.0
+        },
+        {
+          "name": "X-Egg",
+          "price": 20.0
+        },
+        {
+          "name": "X-Maionese",
+          "price": 16.0
+        },
+        {
+          "name": "X-Burger",
+          "price": 16.0
+        },
+        {
+          "name": "X-Calabresa",
+          "price": 18.0
+        },
+        {
+          "name": "X-Frango",
+          "price": 20.0
+        },
+        {
+          "name": "Churrasco com Queijo",
+          "price": 24.0
+        },
+        {
+          "name": "Americano",
+          "price": 18.0
+        },
+        {
+          "name": "Bauru",
+          "price": 14.0
+        },
+        {
+          "name": "Misto Quente",
+          "price": 14.0
+        },
+        {
+          "name": "Misto Frio",
+          "price": 14.0
+        },
+        {
+          "name": "Pão com Ovo",
+          "price": 10.0
+        },
+        {
+          "name": "Pão com Ovo e Queijo",
+          "price": 16.0
+        }
       ]
     },
     {
@@ -109,45 +256,147 @@
         {
           "title": "Sucos",
           "items": [
-            { "name": "Abacaxi", "price": 10.00 },
-            { "name": "Acerola", "price": 10.00 },
-            { "name": "Goiaba", "price": 10.00 },
-            { "name": "Graviola", "price": 10.00 },
-            { "name": "Laranja", "price": null },
-            { "name": "Laranja com Acerola", "price": null },
-            { "name": "Limão", "price": 10.00 },
-            { "name": "Manga", "price": 10.00 },
-            { "name": "Maracujá", "price": 10.00 },
-            { "name": "Morango", "price": 10.00 },
-            { "name": "Umbu", "price": 10.00 },
-            { "name": "Cupuaçu", "price": 10.00 },
-            { "name": "Sucos com Leite", "price": 14.00 },
-            { "name": "Jarra 750ml", "price": 20.00 },
-            { "name": "Jarra 750ml Dois Sabores", "price": 24.00 },
-            { "name": "Jarra 1l", "price": 24.00 },
-            { "name": "Jarra 1l Dois Sabores", "price": 28.00 }
+            {
+              "name": "Abacaxi",
+              "price": 10.0
+            },
+            {
+              "name": "Acerola",
+              "price": 10.0
+            },
+            {
+              "name": "Goiaba",
+              "price": 10.0
+            },
+            {
+              "name": "Graviola",
+              "price": 10.0
+            },
+            {
+              "name": "Laranja",
+              "price": null
+            },
+            {
+              "name": "Laranja com Acerola",
+              "price": null
+            },
+            {
+              "name": "Limão",
+              "price": 10.0
+            },
+            {
+              "name": "Manga",
+              "price": 10.0
+            },
+            {
+              "name": "Maracujá",
+              "price": 10.0
+            },
+            {
+              "name": "Morango",
+              "price": 10.0
+            },
+            {
+              "name": "Umbu",
+              "price": 10.0
+            },
+            {
+              "name": "Cupuaçu",
+              "price": 10.0
+            },
+            {
+              "name": "Sucos com Leite",
+              "price": 14.0
+            },
+            {
+              "name": "Jarra 750ml",
+              "price": 20.0
+            },
+            {
+              "name": "Jarra 750ml Dois Sabores",
+              "price": 24.0
+            },
+            {
+              "name": "Jarra 1l",
+              "price": 24.0
+            },
+            {
+              "name": "Jarra 1l Dois Sabores",
+              "price": 28.0
+            }
           ]
         },
         {
           "title": "Refrigerantes e outras bebidas",
           "items": [
-            { "name": "Refri Mini", "price": 4.00 },
-            { "name": "Refri Lata", "price": 7.00 },
-            { "name": "Coca-Cola 600ml", "price": 10.00 },
-            { "name": "Coca-Cola 1l", "price": 12.00 },
-            { "name": "Coca-Cola 2l", "price": 18.00 },
-            { "name": "Guaraná 600ml", "price": 8.00 },
-            { "name": "Guaraná 1l", "price": 10.00 },
-            { "name": "Guaraná 1,5l", "price": 13.00 },
-            { "name": "Tubaína / Cotuba 600ml", "price": 7.00 },
-            { "name": "Tubaína / Cotuba 2l", "price": 13.00 },
-            { "name": "Sucos Lata Del Valle", "price": 7.00 },
-            { "name": "Ponchito", "price": 6.00 },
-            { "name": "Guaraviton", "price": 6.00 },
-            { "name": "Red Bull / TNT", "price": 15.00 },
-            { "name": "H2O", "price": 7.00 },
-            { "name": "Água 500ml", "price": 4.00 },
-            { "name": "Água com Gás 500ml", "price": 5.00 }
+            {
+              "name": "Refri Mini",
+              "price": 4.0
+            },
+            {
+              "name": "Refri Lata",
+              "price": 7.0
+            },
+            {
+              "name": "Coca-Cola 600ml",
+              "price": 10.0
+            },
+            {
+              "name": "Coca-Cola 1l",
+              "price": 12.0
+            },
+            {
+              "name": "Coca-Cola 2l",
+              "price": 18.0
+            },
+            {
+              "name": "Guaraná 600ml",
+              "price": 8.0
+            },
+            {
+              "name": "Guaraná 1l",
+              "price": 10.0
+            },
+            {
+              "name": "Guaraná 1,5l",
+              "price": 13.0
+            },
+            {
+              "name": "Tubaína / Cotuba 600ml",
+              "price": 7.0
+            },
+            {
+              "name": "Tubaína / Cotuba 2l",
+              "price": 13.0
+            },
+            {
+              "name": "Sucos Lata Del Valle",
+              "price": 7.0
+            },
+            {
+              "name": "Ponchito",
+              "price": 6.0
+            },
+            {
+              "name": "Guaraviton",
+              "price": 6.0
+            },
+            {
+              "name": "Red Bull / TNT",
+              "price": 15.0
+            },
+            {
+              "name": "H2O",
+              "price": 7.0
+            },
+            {
+              "name": "Água 500ml",
+              "price": 4.0
+            },
+            {
+              "name": "Água com Gás 500ml",
+              "price": 5.0
+            }
           ]
         }
       ]
@@ -156,10 +405,22 @@
       "id": "porcoes",
       "title": "Porções",
       "items": [
-        { "name": "Contra Filé", "price": 65.00 },
-        { "name": "Filé de Frango", "price": 50.00 },
-        { "name": "Calabresa", "price": 50.00 },
-        { "name": "Batata", "price": 55.00 }
+        {
+          "name": "Contra Filé",
+          "price": 65.0
+        },
+        {
+          "name": "Filé de Frango",
+          "price": 50.0
+        },
+        {
+          "name": "Calabresa",
+          "price": 50.0
+        },
+        {
+          "name": "Batata",
+          "price": 55.0
+        }
       ]
     }
   ]
