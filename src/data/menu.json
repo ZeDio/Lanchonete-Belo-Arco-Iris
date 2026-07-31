@@ -29,7 +29,8 @@
         },
         {
           "name": "Contra Filé, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 25.0
+          "price": 25.0,
+          "image": "/assets/menu/contra-file-prato-feito.jpg"
         },
         {
           "name": "Calabresa Fresca, Ovo, Arroz, Feijão, Fritas e Salada",
@@ -46,7 +47,8 @@
         },
         {
           "name": "Costela, Arroz, Feijão e Salada",
-          "price": 25.0
+          "price": 25.0,
+          "image": "/assets/menu/costela-prato-feito.jpg"
         }
       ]
     },
@@ -56,7 +58,8 @@
       "items": [
         {
           "name": "Parmegiana, Arroz, Feijão, Fritas e Salada",
-          "price": 46.0
+          "price": 46.0,
+          "image": "/assets/menu/parmegiana-comercial.jpg"
         },
         {
           "name": "Picanha, Ovo, Arroz, Feijão, Fritas e Salada",
@@ -64,7 +67,7 @@
         },
         {
           "name": "Contra Filé, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 28.0,
+          "price": 29.0,
           "image": "/assets/menu/contra-file-comercial.jpg"
         },
         {
@@ -82,7 +85,8 @@
         },
         {
           "name": "Calabresa Defumada, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 25.0
+          "price": 25.0,
+          "image": "/assets/menu/calabresa-defumada-comercial.jpg"
         },
         {
           "name": "Bife Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada",
@@ -94,11 +98,13 @@
         },
         {
           "name": "Omelete, Arroz, Feijão, Fritas e Salada",
-          "price": 25.0
+          "price": 25.0,
+          "image": "/assets/menu/omelete-comercial.jpg"
         },
         {
           "name": "Viagem, acréscimo de",
-          "price": 2.0
+          "price": 2.0,
+          "image": "/assets/menu/embalagem-viagem.jpg"
         },
         {
           "name": "Para duas pessoas, acréscimo de",
@@ -166,11 +172,13 @@
           "items": [
             {
               "name": "Peixe à Milanesa",
-              "price": 26.0
+              "price": 26.0,
+              "image": "/assets/menu/peixe-a-milanesa.jpg"
             },
             {
               "name": "Frango a Passarinho",
-              "price": 25.0
+              "price": 25.0,
+              "image": "/assets/menu/frango-a-passarinho.jpg"
             }
           ]
         },
@@ -265,55 +273,68 @@
           "items": [
             {
               "name": "Abacaxi",
-              "price": 10.0
+              "price": 10.0,
+              "image": "/assets/menu/suco-abacaxi.jpg"
             },
             {
               "name": "Acerola",
-              "price": 10.0
+              "price": 10.0,
+              "image": "/assets/menu/suco-acerola.jpg"
             },
             {
               "name": "Goiaba",
-              "price": 10.0
+              "price": 10.0,
+              "image": "/assets/menu/suco-goiaba.jpg"
             },
             {
               "name": "Graviola",
-              "price": 10.0
+              "price": 10.0,
+              "image": "/assets/menu/suco-graviola.jpg"
             },
             {
               "name": "Laranja",
-              "price": null
+              "price": null,
+              "image": "/assets/menu/suco-laranja.jpg"
             },
             {
               "name": "Laranja com Acerola",
-              "price": null
+              "price": null,
+              "image": "/assets/menu/suco-laranja-com-acerola.jpg"
             },
             {
               "name": "Limão",
-              "price": 10.0
+              "price": 10.0,
+              "image": "/assets/menu/limao-suco.jpg"
             },
             {
               "name": "Manga",
-              "price": 10.0
+              "price": 10.0,
+              "image": "/assets/menu/suco-manga.jpg"
             },
             {
               "name": "Maracujá",
-              "price": 10.0
+              "price": 10.0,
+              "image": "/assets/menu/suco-maracuja.jpg"
             },
             {
               "name": "Morango",
-              "price": 10.0
+              "price": 10.0,
+              "image": "/assets/menu/suco-morango.jpg"
             },
             {
               "name": "Umbu",
-              "price": 10.0
+              "price": 10.0,
+              "image": "/assets/menu/suco-umbu.jpg"
             },
             {
               "name": "Cupuaçu",
-              "price": 10.0
+              "price": 10.0,
+              "image": "/assets/menu/suco-cupuacu.jpg"
             },
             {
               "name": "Sucos com Leite",
-              "price": 14.0
+              "price": 14.0,
+              "image": "/assets/menu/suco-com-leite.jpg"
             },
             {
               "name": "Jarra 750ml",
@@ -436,22 +457,22 @@
       "items": [
         {
           "name": "Arroz",
-          "price": 6.00,
+          "price": 6.0,
           "image": "/assets/menu/arroz-a-parte.jpg"
         },
         {
           "name": "Feijão",
-          "price": 6.00,
+          "price": 6.0,
           "image": "/assets/menu/feijao-a-parte.jpg"
         },
         {
           "name": "Batata Frita Pequena",
-          "price": 10.00,
+          "price": 10.0,
           "image": "/assets/menu/batata-frita-pequena-a-parte.jpg"
         },
         {
           "name": "Salada",
-          "price": 6.00,
+          "price": 6.0,
           "image": "/assets/menu/salada-a-parte.jpg"
         }
       ]

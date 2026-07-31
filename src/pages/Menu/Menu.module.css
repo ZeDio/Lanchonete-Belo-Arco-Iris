@@ -366,12 +366,47 @@
   border-radius: var(--radius-md);
 }
 
+.itemPhotoButton {
+  position: relative;
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
 .itemPhoto {
   width: 72px;
   height: 72px;
   border-radius: var(--radius-sm);
   object-fit: cover;
   flex-shrink: 0;
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+.itemPhotoButton:hover .itemPhoto {
+  transform: scale(1.08);
+}
+
+.itemPhotoZoomIcon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.1rem;
+  background: rgba(11, 58, 117, 0);
+  opacity: 0;
+  transition: opacity var(--transition-base), background var(--transition-base);
+}
+
+.itemPhotoButton:hover .itemPhotoZoomIcon {
+  opacity: 1;
+  background: rgba(11, 58, 117, 0.35);
 }
 
 .itemPhotoText {

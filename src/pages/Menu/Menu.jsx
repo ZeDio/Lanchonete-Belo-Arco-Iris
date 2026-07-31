@@ -16,13 +16,23 @@ function formatPrice(price) {
   return `R$ ${Number(price).toFixed(2).replace('.', ',')}`
 }
 
-function ItemRow({ item, showPhotos }) {
+function ItemRow({ item, showPhotos, onImageClick }) {
   const isPending = item.price === null || item.price === undefined
 
   if (showPhotos && item.image) {
     return (
       <div className={styles.itemRowPhoto}>
-        <img src={item.image} alt={item.name} className={styles.itemPhoto} loading="lazy" />
+        <button
+          type="button"
+          className={styles.itemPhotoButton}
+          onClick={() => onImageClick(item)}
+          aria-label={`Ampliar foto de ${item.name}`}
+        >
+          <img src={item.image} alt={item.name} className={styles.itemPhoto} loading="lazy" />
+          <span className={styles.itemPhotoZoomIcon} aria-hidden="true">
+            <FaSearchPlus />
+          </span>
+        </button>
         <div className={styles.itemPhotoText}>
           <span className={styles.itemName}>{item.name}</span>
           <span className={`${styles.itemPrice} ${isPending ? styles.pending : ''}`}>
@@ -47,6 +57,7 @@ function ItemRow({ item, showPhotos }) {
 export default function Menu() {
   const [active, setActive] = useState(null)
   const [showPhotos, setShowPhotos] = useState(false)
+  const openItemPhoto = (item) => setActive({ src: item.image, alt: item.name })
 
   return (
     <>
@@ -85,7 +96,7 @@ export default function Menu() {
               {cat.items && (
                 <div className={styles.itemsGrid}>
                   {cat.items.map((item) => (
-                    <ItemRow key={item.name} item={item} showPhotos={showPhotos} />
+                    <ItemRow key={item.name} item={item} showPhotos={showPhotos} onImageClick={openItemPhoto} />
                   ))}
                 </div>
               )}
@@ -96,7 +107,7 @@ export default function Menu() {
                     <div className={styles.subcategoryTitle}>{sub.title}</div>
                     <div className={styles.itemsGrid}>
                       {sub.items.map((item) => (
-                        <ItemRow key={item.name} item={item} showPhotos={showPhotos} />
+                        <ItemRow key={item.name} item={item} showPhotos={showPhotos} onImageClick={openItemPhoto} />
                       ))}
                     </div>
                   </div>
@@ -108,7 +119,7 @@ export default function Menu() {
                     <div key={d.day} className={styles.dayCard}>
                       <div className={styles.dayTitle}>{d.day}</div>
                       {d.items.map((item) => (
-                        <ItemRow key={item.name} item={item} showPhotos={showPhotos} />
+                        <ItemRow key={item.name} item={item} showPhotos={showPhotos} onImageClick={openItemPhoto} />
                       ))}
                     </div>
                   ))}
