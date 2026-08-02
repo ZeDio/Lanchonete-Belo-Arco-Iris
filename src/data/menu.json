@@ -16,7 +16,8 @@
         },
         {
           "name": "Filé de Frango, Ovo, Arroz, Fritas e Salada",
-          "price": 20.0
+          "price": 20.0,
+          "image": "/assets/menu/file-frango-sem-feijao-prato-feito.jpg"
         },
         {
           "name": "Filé de Frango, Ovo, Arroz, Feijão, Fritas, Farofa e Salada",
@@ -77,7 +78,8 @@
         },
         {
           "name": "Filé De Frango, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 25.0
+          "price": 25.0,
+          "image": "/assets/menu/file-frango-comercial.jpg"
         },
         {
           "name": "Calabresa Fresca, Ovo, Arroz, Feijão, Fritas e Salada",
@@ -143,7 +145,8 @@
           "items": [
             {
               "name": "Feijoada Média",
-              "price": 55.0
+              "price": 55.0,
+              "image": "/assets/menu/feijoada-media.jpg"
             },
             {
               "name": "Feijoada Prato Feito",
@@ -187,7 +190,8 @@
           "items": [
             {
               "name": "Feijoada Média",
-              "price": 55.0
+              "price": 55.0,
+              "image": "/assets/menu/feijoada-media.jpg"
             },
             {
               "name": "Feijoada Prato Feito",
@@ -338,19 +342,23 @@
             },
             {
               "name": "Jarra 750ml",
-              "price": 20.0
+              "price": 20.0,
+              "image": "/assets/menu/jarra-750ml.jpg"
             },
             {
               "name": "Jarra 750ml Dois Sabores",
-              "price": 24.0
+              "price": 24.0,
+              "image": "/assets/menu/jarra-750ml.jpg"
             },
             {
               "name": "Jarra 1l",
-              "price": 24.0
+              "price": 24.0,
+              "image": "/assets/menu/jarra-1l.jpg"
             },
             {
               "name": "Jarra 1l Dois Sabores",
-              "price": 28.0
+              "price": 28.0,
+              "image": "/assets/menu/jarra-1l.jpg"
             }
           ]
         },
