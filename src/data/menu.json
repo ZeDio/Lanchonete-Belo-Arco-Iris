@@ -92,7 +92,8 @@
         },
         {
           "name": "Bife Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 32.0
+          "price": 32.0,
+          "image": "/assets/menu/bife-amilanesa-comercial.jpg"
         },
         {
           "name": "Frango Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada",
@@ -123,11 +124,13 @@
           "items": [
             {
               "name": "Costela com Mandioca",
-              "price": 25.0
+              "price": 25.0,
+              "image": "/assets/menu/costela-com-mandioca.jpg"
             },
             {
               "name": "Picadinho",
-              "price": 25.0
+              "price": 25.0,
+              "image": "/assets/menu/picadinho.jpg"
             }
           ]
         },
