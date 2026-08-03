@@ -1,0 +1,249 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ---- Formulário ---- */
+
+.formCard {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: calc(var(--nav-height) + 24px);
+}
+
+.formTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+  color: var(--color-gray-900);
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-gray-900);
+  margin-bottom: 8px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-gray-900);
+  background: var(--color-white);
+  transition: border-color var(--transition-base);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-blue-500);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.charCount {
+  text-align: right;
+  font-size: 0.78rem;
+  color: var(--color-gray-600);
+  margin-top: 4px;
+}
+
+.photoRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.photoPreview {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 1px solid var(--color-gray-300);
+}
+
+.fileLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px dashed var(--color-gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+  cursor: pointer;
+  transition: border-color var(--transition-base), color var(--transition-base);
+}
+
+.fileLabel:hover {
+  border-color: var(--color-blue-500);
+  color: var(--color-blue-600);
+}
+
+.fileInput {
+  display: none;
+}
+
+.removePhoto {
+  background: none;
+  border: none;
+  color: var(--color-gray-600);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.errorMsg {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.successMsg {
+  color: var(--color-blue-700);
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.submitBtn {
+  width: 100%;
+  justify-content: center;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ---- Lista de avaliações ---- */
+
+.listHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.avgWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avgValue {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--color-gray-900);
+}
+
+.avgCount {
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 640px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  display: flex;
+  gap: 16px;
+}
+
+.cardPhoto {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+  cursor: zoom-in;
+}
+
+.cardBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.cardName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-gray-900);
+}
+
+.cardDate {
+  font-size: 0.78rem;
+  color: var(--color-gray-600);
+}
+
+.cardComment {
+  font-size: 0.92rem;
+  color: var(--color-gray-600);
+  line-height: 1.55;
+  word-break: break-word;
+}
+
+.empty {
+  text-align: center;
+  color: var(--color-gray-600);
+  padding: 40px 20px;
+  border: 1px dashed var(--color-gray-300);
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .formCard {
+    position: static;
+  }
+
+  .list {
+    max-height: none;
+  }
+}

@@ -1,0 +1,34 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /reviews/{reviewId} {
+      // Qualquer pessoa pode LER as avaliações (aparecem públicas na Home)
+      allow read: if true;
+
+      // Qualquer pessoa pode CRIAR uma avaliação, desde que os dados sejam válidos
+      allow create: if
+        request.resource.data.name is string &&
+        request.resource.data.name.size() > 0 &&
+        request.resource.data.name.size() <= 60 &&
+
+        request.resource.data.comment is string &&
+        request.resource.data.comment.size() > 0 &&
+        request.resource.data.comment.size() <= 500 &&
+
+        request.resource.data.rating is int &&
+        request.resource.data.rating >= 1 &&
+        request.resource.data.rating <= 5 &&
+
+        (
+          request.resource.data.photo == null ||
+          (request.resource.data.photo is string && request.resource.data.photo.size() < 300000)
+        );
+
+      // Ninguém pode editar ou apagar avaliações pelo site
+      // (você pode apagar manualmente pelo Console do Firebase, se precisar)
+      allow update, delete: if false;
+    }
+  }
+}

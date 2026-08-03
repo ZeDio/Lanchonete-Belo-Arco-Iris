@@ -372,3 +372,26 @@ A foto ao lado de "Sobre a Lanchonete" na Home virou um carrossel automático (`
 3. Só isso — o carrossel detecta a nova foto automaticamente, não precisa mexer em nenhum componente.
 
 Vale a mesma dica de otimização das fotos do cardápio: reduza pra no máximo ~1400px de largura e salve em `.jpg` com qualidade 75-80% antes de subir, senão fotos de celular (que costumam vir com vários MB) deixam o carregamento do site mais lento. Se preferir, me manda as fotos direto que eu já devolvo otimizadas.
+
+## ⭐ Avaliações dos clientes (Firebase)
+
+A Home agora tem uma seção pública de avaliações (nome, nota de 1 a 5 estrelas, comentário e foto opcional), usando **Firebase Firestore** como banco de dados. Qualquer visitante pode publicar uma avaliação, e ela aparece na hora para todo mundo — não existe fila de aprovação.
+
+### Configuração necessária no Firebase (uma vez só)
+
+1. **Crie as regras de segurança**: no [Console do Firebase](https://console.firebase.google.com) → seu projeto → **Firestore Database → Regras**, cole o conteúdo do arquivo `firestore.rules` (na raiz deste projeto) e clique em **Publicar**. Essas regras garantem que:
+   - Qualquer um pode *ler* as avaliações (por isso aparecem públicas).
+   - Qualquer um pode *criar* uma avaliação, desde que nome, nota (1-5) e comentário sejam válidos.
+   - **Ninguém pode editar ou apagar** avaliações pelo site — nem a da própria pessoa.
+
+2. As chaves do Firebase (`apiKey`, `projectId` etc.) já estão configuradas em `src/lib/firebase.js`. Essas chaves são públicas por natureza (todo site com Firebase expõe elas no navegador) — quem protege os dados de verdade são as regras do Firestore, não o segredo da chave.
+
+### Como funciona a moderação
+
+Como não tem fila de aprovação, uma avaliação fica pública assim que é enviada. Se precisar remover alguma (spam, ofensa, etc.), vá em **Console do Firebase → Firestore Database → coleção `reviews`**, encontre o documento e apague com o ícone de lixeira — não precisa mexer em código nem fazer novo deploy.
+
+### Sobre as fotos das avaliações
+
+As fotos são comprimidas no próprio navegador da pessoa antes de enviar (redimensionadas para 480px de largura, qualidade 60%) e guardadas como texto (base64) dentro do próprio documento do Firestore — **sem usar o Firebase Storage**, que passou a exigir o plano pago (Blaze) para ser habilitado.
+
+Isso significa fotos um pouco mais simples do que as do cardápio, mas 100% dentro do plano gratuito (Spark). Se no futuro você quiser fotos de melhor qualidade nas avaliações, dá pra migrar para o Firebase Storage habilitando o plano Blaze — vale lembrar que o Blaze só cobra acima de uma cota gratuita bem generosa (5GB armazenados, 1GB de download por dia), então pra um site de porte pequeno como esse dificilmente sairia do R$ 0,00.
