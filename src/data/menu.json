@@ -26,20 +26,13 @@
         },
         {
           "name": "Frango Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 24.0
+          "price": 24.0,
+          "image": "/assets/menu/frango-amilanesa-prato-feito.jpg"
         },
         {
           "name": "Contra Filé, Ovo, Arroz, Feijão, Fritas e Salada",
           "price": 25.0,
           "image": "/assets/menu/contra-file-prato-feito.jpg"
-        },
-        {
-          "name": "Calabresa Fresca, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 25.0
-        },
-        {
-          "name": "Calabresa Defumada, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 25.0
         },
         {
           "name": "Parmegiana, Arroz e Fritas",
@@ -64,7 +57,8 @@
         },
         {
           "name": "Picanha, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 48.0
+          "price": 48.0,
+          "image": "/assets/menu/picanha-comercial.jpg"
         },
         {
           "name": "Contra Filé, Ovo, Arroz, Feijão, Fritas e Salada",
@@ -97,7 +91,8 @@
         },
         {
           "name": "Frango Amilanesa, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 28.0
+          "price": 28.0,
+          "image": "/assets/menu/frango-amilanesa-comercial.jpg"
         },
         {
           "name": "Omelete, Arroz, Feijão, Fritas e Salada",
@@ -111,7 +106,8 @@
         },
         {
           "name": "Para duas pessoas, acréscimo de",
-          "price": 4.0
+          "price": 4.0,
+          "image": "/assets/menu/dividir-2-pessoas.jpg"
         }
       ]
     },
@@ -139,7 +135,8 @@
           "items": [
             {
               "name": "Bife a Rolê com Purê",
-              "price": 28.0
+              "price": 28.0,
+              "image": "/assets/menu/bife-a-role-com-pure.jpg"
             }
           ]
         },

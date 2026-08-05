@@ -26,9 +26,9 @@ service cloud.firestore {
           (request.resource.data.photo is string && request.resource.data.photo.size() < 300000)
         );
 
-      // Ninguém pode editar ou apagar avaliações pelo site
-      // (você pode apagar manualmente pelo Console do Firebase, se precisar)
-      allow update, delete: if false;
+      allow update: if false;
+
+      allow delete: if request.auth != null;
     }
   }
 }

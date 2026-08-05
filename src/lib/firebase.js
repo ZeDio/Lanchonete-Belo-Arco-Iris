@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
+import { getAuth } from 'firebase/auth'
 
 // Configuração do projeto Firebase (lanchonete-belo-arco-iris)
 const firebaseConfig = {
@@ -13,3 +14,4 @@ const firebaseConfig = {
 
 export const firebaseApp = initializeApp(firebaseConfig)
 export const db = getFirestore(firebaseApp)
+export const auth = getAuth(firebaseApp)
