@@ -77,7 +77,8 @@
         },
         {
           "name": "Calabresa Fresca, Ovo, Arroz, Feijão, Fritas e Salada",
-          "price": 25.0
+          "price": 25.0,
+          "image": "/assets/menu/calabresa-fresca-comercial.jpg"
         },
         {
           "name": "Calabresa Defumada, Ovo, Arroz, Feijão, Fritas e Salada",
