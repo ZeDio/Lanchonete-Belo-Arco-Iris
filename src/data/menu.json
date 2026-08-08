@@ -483,6 +483,11 @@
           "name": "Salada",
           "price": 6.0,
           "image": "/assets/menu/salada-a-parte.jpg"
+        },
+        {
+          "name": "Ovo",
+          "price": 4.0,
+          "image": "/assets/menu/adicional-de-ovo.jpg"
         }
       ]
     }

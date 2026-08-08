@@ -170,9 +170,12 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-height: 640px;
-  overflow-y: auto;
-  padding-right: 6px;
+}
+
+.loadMoreWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
 }
 
 .card {
@@ -241,9 +244,5 @@
 
   .formCard {
     position: static;
-  }
-
-  .list {
-    max-height: none;
   }
 }

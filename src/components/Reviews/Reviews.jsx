@@ -18,6 +18,7 @@ import styles from './Reviews.module.css'
 
 const COMMENT_MAX = 500
 const NAME_MAX = 60
+const PAGE_SIZE = 5
 
 function formatDate(timestamp) {
   if (!timestamp?.toDate) return ''
@@ -31,6 +32,7 @@ function formatDate(timestamp) {
 export default function Reviews() {
   const [reviews, setReviews] = useState([])
   const [loadingList, setLoadingList] = useState(true)
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
 
   const [name, setName] = useState('')
   const [rating, setRating] = useState(0)
@@ -236,14 +238,14 @@ export default function Reviews() {
                 </div>
               )}
 
-              {reviews.map((r, i) => (
+              {reviews.slice(0, visibleCount).map((r, i) => (
                 <motion.div
                   key={r.id}
                   className={styles.card}
                   initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.4 }}
-                  transition={{ duration: 0.4, delay: (i % 6) * 0.05, ease: 'easeOut' }}
+                  transition={{ duration: 0.4, delay: (i % PAGE_SIZE) * 0.05, ease: 'easeOut' }}
                 >
                   {r.photo && (
                     <img
@@ -266,6 +268,18 @@ export default function Reviews() {
                 </motion.div>
               ))}
             </div>
+
+            {visibleCount < reviews.length && (
+              <div className={styles.loadMoreWrap}>
+                <button
+                  type="button"
+                  className="btn btn--outline"
+                  onClick={() => setVisibleCount((v) => v + PAGE_SIZE)}
+                >
+                  Ver mais avaliações ({reviews.length - visibleCount} restantes)
+                </button>
+              </div>
+            )}
           </motion.div>
         </div>
       </div>
