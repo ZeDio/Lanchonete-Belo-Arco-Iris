@@ -86,7 +86,7 @@ export default function Contact() {
                   <FaClock />
                 </div>
                 <div>
-                  <div className={styles.infoLabel}>Sábado e Domingo</div>
+                  <div className={styles.infoLabel}>Sábado</div>
                   <div className={styles.infoValue}>07:30 às 15:00</div>
                 </div>
               </div>

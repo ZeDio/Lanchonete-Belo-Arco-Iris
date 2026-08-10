@@ -24,7 +24,7 @@ export default function Hours() {
           </div>
 
           <div className={styles.block}>
-            <div className={styles.blockLabel}>Sábado e Domingo</div>
+            <div className={styles.blockLabel}>Sábado</div>
             <div className={styles.blockValue}>07:30 às 15:00</div>
           </div>
         </motion.div>

@@ -56,7 +56,7 @@ function ItemRow({ item, showPhotos, onImageClick }) {
 
 export default function Menu() {
   const [active, setActive] = useState(null)
-  const [showPhotos, setShowPhotos] = useState(false)
+  const [showPhotos, setShowPhotos] = useState(true)
   const openItemPhoto = (item) => setActive({ src: item.image, alt: item.name })
 
   return (

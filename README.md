@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="./src/assets/logo.svg" alt="Lanchonete Belo Arco-Iris" width="300">
+  <img src="./src/assets/logo.svg" alt="Lanchonete Belo Arco-Iris" width="260">
 </p>
 
 <h1 align="center">Lanchonete Belo Arco-Iris</h1>
 
 <p align="center">
-  Site institucional desenvolvido com <strong>React</strong> e <strong>Vite</strong> para apresentar a Lanchonete Belo Arco-Iris, localizada no Jardim da Glória, em São Paulo.
+  Site institucional desenvolvido com React e Vite para a Lanchonete Belo Arco-Iris, no Jardim da Glória, São Paulo.
 </p>
 
 <p align="center">
@@ -13,105 +13,34 @@
 </p>
 
 <p align="center">
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![CSS Modules](https://img.shields.io/badge/CSS_Modules-000000?style=for-the-badge&logo=cssmodules&logoColor=white)
-
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/React_Router-CA4245?style=flat-square&logo=react-router&logoColor=white" alt="React Router">
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white" alt="Framer Motion">
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" alt="Firebase">
 </p>
 
 ---
 
-# 📖 Sobre o projeto
+## Sobre o projeto
 
-O **Lanchonete Belo Arco-Iris** é um site institucional desenvolvido para apresentar uma das tradicionais lanchonetes da região do **Jardim da Glória**, em São Paulo.
+Site institucional da Lanchonete Belo Arco-Iris, restaurante tradicional do Jardim da Glória, em São Paulo. Reúne cardápio, horário de funcionamento, localização, contato e avaliações de clientes em um só lugar.
 
-O projeto foi pensado para oferecer uma experiência simples, moderna e intuitiva, permitindo que os clientes encontrem rapidamente as principais informações da lanchonete, como horários de funcionamento, localização, contato e cardápio.
+A identidade visual segue as cores do cardápio impresso do estabelecimento: azul como cor principal, fundo branco e texto em preto.
 
-A identidade visual foi inspirada nas cores do próprio cardápio da lanchonete, utilizando uma paleta clara composta principalmente por **azul**, **branco** e **preto**, transmitindo organização, confiança e profissionalismo.
+## Funcionalidades
 
----
+- Página inicial com apresentação da lanchonete, diferenciais e horário de funcionamento
+- Cardápio completo em formato de dados (não é só uma imagem escaneada), com preços e fotos por prato
+- Aviso automático do prato do dia na página inicial, de acordo com o dia da semana
+- Carrossel de fotos do salão e da fachada
+- Zoom nas imagens originais do cardápio e download em PDF
+- Seção de avaliações de clientes (nome, nota, comentário e foto), com dados salvos no Firebase
+- Localização integrada ao Google Maps
+- Layout responsivo, com menu hambúrguer no celular
+- Transições e animações com Framer Motion
 
-# ✨ Funcionalidades
-
-- 🏠 Página inicial institucional
-- 🍽️ Apresentação da lanchonete
-- ⭐ Seção com diferenciais
-- 🕒 Horário de funcionamento
-- 📖 Página exclusiva para o cardápio
-- 🔍 Visualização ampliada das imagens do cardápio
-- 📄 Download do cardápio em PDF
-- 📍 Localização integrada ao Google Maps
-- ☎️ Informações completas de contato
-- 📱 Layout totalmente responsivo
-- ✨ Animações suaves utilizando Framer Motion
-- ⚡ Navegação rápida entre páginas utilizando React Router
-
----
-
-# 📄 Páginas
-
-## 🏠 Home
-
-A página inicial apresenta a identidade da lanchonete através de um banner moderno e diversas seções institucionais.
-
-### Conteúdo
-
-- Hero com imagem de fundo
-- Botão para visualizar o cardápio
-- Botão "Como Chegar"
-- Apresentação da lanchonete
-- Diferenciais
-- Horário de funcionamento
-- Chamada para conhecer o cardápio
-
----
-
-## 📖 Cardápio
-
-Página dedicada ao cardápio oficial da lanchonete.
-
-Recursos disponíveis:
-
-- Cardápio frente
-- Cardápio verso
-- Zoom ao clicar
-- Download em PDF
-
----
-
-## 📍 Contato
-
-Centraliza todas as informações necessárias para que os clientes possam visitar ou entrar em contato com a lanchonete.
-
-Inclui:
-
-- Endereço completo
-- Telefone
-- Horário de funcionamento
-- Google Maps incorporado
-- Botão "Como Chegar"
-
----
-
-# 🎨 Design
-
-A identidade visual foi construída seguindo o estilo do cardápio oficial da lanchonete.
-
-### Paleta de cores
-
-- 🔵 Azul (cor principal)
-- ⚪ Branco (fundo)
-- ⚫ Preto (textos)
-- 🔘 Tons suaves de cinza
-
-O objetivo foi transmitir um ambiente moderno, acolhedor e organizado, mantendo a tradição da lanchonete.
-
----
-
-# 🚀 Tecnologias utilizadas
+## Tecnologias
 
 - React
 - Vite
@@ -119,20 +48,19 @@ O objetivo foi transmitir um ambiente moderno, acolhedor e organizado, mantendo 
 - Framer Motion
 - React Icons
 - CSS Modules
+- Firebase (Firestore e Authentication)
 
----
-
-# 📂 Estrutura do projeto
+## Estrutura do projeto
 
 ```text
 src/
-│
 ├── assets/
 │   └── logo.svg
-│
 ├── components/
 │   ├── About/
+│   ├── Carousel/
 │   ├── CTA/
+│   ├── DailySpecial/
 │   ├── Differentials/
 │   ├── Footer/
 │   ├── Hero/
@@ -140,163 +68,60 @@ src/
 │   ├── Lightbox/
 │   ├── Navbar/
 │   ├── PageTransition/
+│   ├── Reviews/
 │   └── ScrollToTop.jsx
-│
 ├── pages/
 │   ├── Home/
 │   ├── Menu/
-│   └── Contact/
-│
+│   ├── Contact/
+│   └── AdminReviews/
+├── data/
+│   ├── menu.json
+│   └── fotosDoEstabelecimento.json
+├── lib/
+│   └── firebase.js
 ├── styles/
 │   ├── global.css
 │   └── tokens.css
-│
 ├── App.jsx
 └── main.jsx
 
 public/
-│
 ├── assets/
-│   ├── hero-bg.jpg
-│   ├── home.png
-│   ├── about-photo.jpg
+│   ├── menu/
+│   ├── salao/
 │   ├── cardapio-frente.svg
 │   ├── cardapio-verso.svg
 │   ├── cardapio-belo-arco-iris.pdf
 │   └── favicon.svg
-│
 └── ...
+
+firestore.rules
 ```
 
----
+## Como executar
 
-# 💻 Como executar o projeto
-
-## Clone o repositório
+Pré-requisito: Node.js 18 ou superior.
 
 ```bash
 git clone https://github.com/seu-usuario/Lanchonete-Belo-Arco-Iris.git
-```
-
-## Acesse a pasta
-
-```bash
 cd Lanchonete-Belo-Arco-Iris
-```
-
-## Instale as dependências
-
-```bash
 npm install
-```
-
-## Execute o projeto
-
-```bash
 npm run dev
 ```
 
-Depois, abra o endereço informado no terminal.
+O endereço do projeto aparece no terminal, normalmente `http://localhost:5173`.
 
-Normalmente:
-
-```text
-http://localhost:5173
-```
-
----
-
-# 📦 Build de produção
-
-Gerar o build:
+Para gerar e testar o build de produção:
 
 ```bash
 npm run build
-```
-
-Visualizar o build localmente:
-
-```bash
 npm run preview
 ```
 
----
+## Cardápio
 
-# 📱 Responsividade
-
-O projeto foi desenvolvido para funcionar perfeitamente em diferentes dispositivos.
-
-Suporte para:
-
-- Desktop
-- Notebook
-- Tablet
-- Smartphone
-
-A interface adapta automaticamente os componentes para diferentes resoluções, incluindo menu hambúrguer em dispositivos móveis.
-
----
-
-# ⚡ Performance
-
-Durante o desenvolvimento foram adotadas diversas otimizações para garantir uma navegação rápida e fluida.
-
-Entre elas:
-
-- Componentização em React
-- CSS Modules
-- Imagens otimizadas
-- Cardápio em SVG
-- PDF para download
-- Lazy animations
-- Código reutilizável
-- Layout responsivo
-- Navegação otimizada
-
----
-
-# 📍 Informações da Lanchonete
-
-**Lanchonete Belo Arco-Iris**
-
-📍 Rua Inglês de Sousa, 305  
-Jardim da Glória — São Paulo/SP  
-CEP: 01546-010
-
-☎️ (11) 3539-4944
-
-🕒 Horário de funcionamento
-
-**Segunda à Sexta-feira**
-
-07:00 às 20:00
-
-**Sábado e Domingo**
-
-07:30 às 15:00
-
----
-
-# 📸 Preview
-
-<p align="center">
-  <img src="./public/assets/home.png" alt="Preview do site" width="100%">
-</p>
-
----
-
-# 👨‍💻 Desenvolvedor
-
-Desenvolvido por **José Diogo** como um projeto institucional utilizando React e Vite, com foco em performance, responsividade e uma experiência de navegação moderna.
-- José Diogo - https://jose-diogo.vercel.app/
-
----
-
-# 🧾 Cardápio em JSON
-
-Todo o conteúdo do cardápio (pratos feitos, comerciais, pratos do dia, lanches, bebidas e porções) agora vive em `src/data/menu.json` — não é mais só a imagem escaneada, cada item existe como dado e é renderizado direto na página `/cardapio`.
-
-**Como adicionar os preços:** abra `src/data/menu.json` e preencha o campo `price` de cada item com um número (ex.: `19.9`). Enquanto o campo estiver como `null`, o site mostra um travessão (`—`) no lugar do preço.
+Todo o conteúdo do cardápio (pratos feitos, comerciais, pratos do dia, lanches, bebidas e porções) fica em `src/data/menu.json`. A página `/cardapio` lê esse arquivo e monta as seções, o menu de atalhos e a formatação dos preços automaticamente — não é necessário alterar nenhum componente para adicionar ou editar itens.
 
 Estrutura do arquivo:
 
@@ -307,21 +132,21 @@ Estrutura do arquivo:
       "id": "pratos-feitos",
       "title": "Pratos Feitos",
       "items": [
-        { "name": "Picanha, Ovo, Arroz, Fritas e Salada", "price": null }
+        { "name": "Picanha, Ovo, Arroz, Fritas e Salada", "price": 36.0 }
       ]
     },
     {
       "id": "bebidas",
       "title": "Bebidas",
       "subcategories": [
-        { "title": "Sucos", "items": [ { "name": "Laranja", "price": null } ] }
+        { "title": "Sucos", "items": [{ "name": "Laranja", "price": 10.0 }] }
       ]
     },
     {
       "id": "pratos-do-dia",
       "title": "Pratos do Dia",
       "days": [
-        { "day": "Segunda-Feira", "items": [ { "name": "Picadinho", "price": null } ] }
+        { "day": "Segunda-Feira", "items": [{ "name": "Picadinho", "price": 25.0 }] }
       ]
     }
   ]
@@ -329,84 +154,88 @@ Estrutura do arquivo:
 ```
 
 - Categorias simples (Pratos Feitos, Comerciais, Lanches, Porções) usam `items`.
-- **Bebidas** usa `subcategories` (Sucos / Refrigerantes e outras bebidas) para separar os grupos.
-- **Pratos do Dia** usa `days`, um array com o item do dia da semana.
+- Bebidas usa `subcategories`, para separar sucos de refrigerantes.
+- Pratos do Dia usa `days`, com os itens de cada dia da semana.
+- Um preço como `null` faz o site mostrar um travessão no lugar do valor.
 
-Para adicionar um item novo, é só copiar o formato `{ "name": "...", "price": null }` dentro da categoria certa. Não precisa mexer em nenhum componente React — a página lê o JSON automaticamente e monta a seção, o menu de atalhos no topo e a formatação do preço (`R$ 19,90`).
+Para adicionar um item novo, basta copiar o formato `{ "name": "...", "price": null }` dentro da categoria correspondente.
 
-As imagens originais do cardápio e o PDF continuam disponíveis mais abaixo na página, para quem preferir ver a arte tal como impressa.
+### Fotos dos pratos
 
-## 📸 Fotos dos pratos
-
-Qualquer item do JSON pode ganhar uma foto adicionando o campo `"image"` com o caminho do arquivo, por exemplo:
+Qualquer item pode ter uma foto, com o campo `image`:
 
 ```json
-{ "name": "Feijoada Prato Feito", "price": 35.00, "image": "/assets/menu/feijoada-prato-feito.jpg" }
+{ "name": "Feijoada Prato Feito", "price": 35.0, "image": "/assets/menu/feijoada-prato-feito.jpg" }
 ```
 
-As fotos ficam em `public/assets/menu/`. Na página do Cardápio existe um botão **"Ver com fotos"** — quando desligado (padrão), o cardápio aparece exatamente como antes, só texto e preço; quando ligado, todo item que tiver o campo `image` passa a mostrar a foto ao lado do nome. Itens sem foto continuam aparecendo normalmente mesmo com o botão ligado.
+As imagens ficam em `public/assets/menu/`. A página do cardápio tem um botão "Ver com fotos", fixo no canto da tela: quando ativo, todo item com `image` mostra a foto ao lado do nome (clicável, com zoom); itens sem foto continuam aparecendo normalmente.
 
-**Para adicionar novas fotos**, salve o arquivo em `public/assets/menu/nome-do-prato.jpg` e recomendo otimizá-la antes (fotos de celular costumam vir muito grandes, 3-5MB, o que deixa o site lento). Um jeito rápido:
+Recomendações antes de adicionar uma foto nova:
 
-- Redimensione para no máximo ~900px de largura (não precisa de mais que isso para o tamanho exibido no site).
-- Recorte em proporção 4:3, se possível, para ficar do mesmo tamanho das outras fotos.
-- Salve como `.jpg` com qualidade em torno de 75-80% — isso normalmente reduz o arquivo de alguns MB para menos de 100KB sem perda visível de qualidade.
+- Redimensionar para no máximo 900px de largura.
+- Recortar em proporção 4:3, para manter o padrão das demais fotos.
+- Salvar em `.jpg`, qualidade entre 75% e 80% — normalmente reduz o arquivo para menos de 100KB sem perda visível.
 
-Ferramentas online como [squoosh.app](https://squoosh.app) fazem isso de graça, sem precisar instalar nada — ou me manda a foto que eu otimizo e já devolvo pronta pra colocar no `menu.json`.
+Ferramentas como [squoosh.app](https://squoosh.app) fazem essa otimização gratuitamente.
 
-**Botão flutuante:** o "Ver com fotos" agora fica fixo no canto inferior direito da tela, sobre o conteúdo, e continua acessível mesmo rolando a página.
+### Fotos do estabelecimento (carrossel)
 
-**Nova categoria "Porções à Parte":** adicionada logo abaixo de Comerciais no `menu.json` (Arroz, Feijão, Batata Frita Pequena e Salada), já com fotos. Os preços ficaram como `null` — é só preencher quando definir os valores.
+O carrossel da página inicial é alimentado por `src/data/fotosDoEstabelecimento.json` e passa as fotos automaticamente, com navegação manual por setas ou indicadores.
 
-## 🖼️ Carrossel do salão (Home)
+Para adicionar uma foto:
 
-A foto ao lado de "Sobre a Lanchonete" na Home virou um carrossel automático (`src/components/Carousel`), alimentado por `src/data/fotosDoEstabelecimento.json`. Ele passa as fotos sozinho a cada ~4,5s, mas também dá pra navegar pelas setas ou pelos pontinhos.
-
-**Para adicionar mais fotos do salão** (por exemplo, amanhã):
-
-1. Salve o arquivo em `public/assets/salao/salao-3.jpg` (siga a numeração).
-2. Adicione uma entrada em `src/data/fotosDoEstabelecimento.json`:
+1. Salvar o arquivo em `public/assets/salao/`.
+2. Adicionar uma entrada no JSON:
    ```json
    { "src": "/assets/salao/salao-3.jpg", "alt": "Descrição da foto" }
    ```
-3. Só isso — o carrossel detecta a nova foto automaticamente, não precisa mexer em nenhum componente.
 
-Vale a mesma dica de otimização das fotos do cardápio: reduza pra no máximo ~1400px de largura e salve em `.jpg` com qualidade 75-80% antes de subir, senão fotos de celular (que costumam vir com vários MB) deixam o carregamento do site mais lento. Se preferir, me manda as fotos direto que eu já devolvo otimizadas.
+Mesma recomendação de otimização: até 1400px de largura, `.jpg`, qualidade 75-80%.
 
-## ⭐ Avaliações dos clientes (Firebase)
+## Avaliações dos clientes
 
-A Home agora tem uma seção pública de avaliações (nome, nota de 1 a 5 estrelas, comentário e foto opcional), usando **Firebase Firestore** como banco de dados. Qualquer visitante pode publicar uma avaliação, e ela aparece na hora para todo mundo — não existe fila de aprovação.
+A página inicial tem uma seção pública de avaliações (nome, nota de 1 a 5 estrelas, comentário e foto opcional), usando Firebase Firestore. Qualquer visitante pode publicar uma avaliação, que aparece imediatamente para os demais — não há fila de aprovação.
 
-### Como funciona a moderação
+As fotos são comprimidas no navegador antes do envio (480px de largura, qualidade 60%) e guardadas como texto (base64) dentro do próprio documento do Firestore, sem depender do Firebase Storage — que passou a exigir o plano pago (Blaze) para ser habilitado. Isso mantém o recurso inteiramente no plano gratuito (Spark).
 
-Como não tem fila de aprovação, uma avaliação fica pública assim que é enviada. Se precisar remover alguma (spam, ofensa, etc.), vá em **Console do Firebase → Firestore Database → coleção `reviews`**, encontre o documento e apague com o ícone de lixeira — não precisa mexer em código nem fazer novo deploy.
+### Moderação
 
-### Sobre as fotos das avaliações
+Não existe fila de aprovação. Para remover uma avaliação:
 
-As fotos são comprimidas no próprio navegador da pessoa antes de enviar (redimensionadas para 480px de largura, qualidade 60%) e guardadas como texto (base64) dentro do próprio documento do Firestore — **sem usar o Firebase Storage**, que passou a exigir o plano pago (Blaze) para ser habilitado.
+- Pelo Console do Firebase, em Firestore Database, coleção `reviews`; ou
+- Pela página interna `/gerenciar-avaliacoes`, que lista as avaliações com um botão de exclusão em cada uma.
 
-Isso significa fotos um pouco mais simples do que as do cardápio, mas 100% dentro do plano gratuito (Spark). Se no futuro você quiser fotos de melhor qualidade nas avaliações, dá pra migrar para o Firebase Storage habilitando o plano Blaze — vale lembrar que o Blaze só cobra acima de uma cota gratuita bem generosa (5GB armazenados, 1GB de download por dia), então pra um site de porte pequeno como esse dificilmente sairia do R$ 0,00.
+Essa página não aparece em nenhum menu do site e não exige login — ela autentica de forma anônima apenas para ter permissão de exclusão nas regras do Firestore.
 
-### Excluindo avaliações sem precisar do Console do Firebase
+### Segurança
 
-Existe uma página escondida (não aparece em nenhum menu do site) só pra você excluir avaliações rapidamente, tipo quando alguém deixar um comentário ofensivo/spam e você não estiver com o Console do Firebase à mão:
+Pontos relevantes sobre as regras em `firestore.rules`:
 
-```
-https://lanchonete-belo-arco-iris.vercel.app/gerenciar-avaliacoes
-```
+- Criação de avaliações exige exatamente os campos esperados (`name`, `rating`, `comment`, `photo`, `createdAt`) — nenhum campo extra é aceito, e `createdAt` precisa ser a hora real do servidor, o que impede datas forjadas.
+- A exclusão está liberada para qualquer sessão autenticada, incluindo anônima. Essa é uma decisão consciente: como o login anônimo fica disponível para o site inteiro, qualquer visitante que abra o console do navegador também consegue autenticar-se e excluir avaliações, sem precisar sequer conhecer o endereço da página interna. A alternativa mais segura — login de e-mail e senha apenas para o responsável pelo site, com uma permissão especial de administrador — foi avaliada e não foi adotada, para não haver nenhuma tela de login no site. Caso essa decisão mude no futuro, a correção é pontual e não afeta o restante do site.
+- Não há proteção contra envio automatizado (bots). Se isso se tornar um problema, o Firebase App Check (gratuito, não exige o plano Blaze) é a forma recomendada de mitigar.
+- As chaves do Firebase em `src/lib/firebase.js` são públicas por natureza — todo site que usa Firebase as expõe no navegador. A proteção real dos dados está nas regras do Firestore, não no sigilo dessas chaves. Não há nenhuma chave de servidor ou credencial sensível neste projeto.
 
-## 🔒 Segurança — riscos conhecidos e aceitos
+## Informações da lanchonete
 
-Esta seção documenta decisões de segurança tomadas conscientemente, para referência futura.
+**Lanchonete Belo Arco-Iris**
 
-**A exclusão de avaliações não usa login real, por escolha.** A página `/gerenciar-avaliacoes` autentica anonimamente (sem pedir senha) só para liberar a permissão de excluir nas regras do Firestore. Isso tem uma limitação importante: como o login anônimo fica disponível pro site inteiro, **qualquer visitante que abra o DevTools do navegador na página principal também consegue se autenticar anonimamente e excluir avaliações** — não é preciso nem descobrir a URL escondida. Ou seja, a segurança real aqui é baixa; a URL escondida é só uma conveniência de acesso, não uma trava.
+Rua Inglês de Sousa, 305 — Jardim da Glória, São Paulo/SP — CEP 01546-010
 
-- **Por que foi mantido assim**: a alternativa correta (login de e-mail/senha só para o proprietário, com uma *custom claim* de admin) foi oferecida e conscientemente recusada, para não ter tela de login em lugar nenhum do site.
-- **Como reduzir o risco no dia a dia**: não compartilhe o link de `/gerenciar-avaliacoes` publicamente; se notar avaliações sumindo sem explicação, isso pode indicar abuso dessa brecha.
-- **Se um dia quiser corrigir de vez**: é só pedir — a mudança é adicionar um login de e-mail/senha simples (só nessa página) e trocar a regra do Firestore para exigir uma *custom claim* de admin em vez de "qualquer sessão anônima". Não afeta o resto do site (visitantes continuam sem login para tudo).
+Telefone: (11) 3539-4944
 
-**Criação de avaliações (`allow create`)** exige que os dados tenham exatamente os campos esperados (`name`, `rating`, `comment`, `photo`, `createdAt`) — nenhum campo extra é aceito — e que `createdAt` seja sempre a hora real do servidor (impede datas forjadas).
+Horário de funcionamento:
 
-**Não há proteção contra spam automatizado** (bots enviando avaliações em massa). Se isso um dia for um problema, a forma gratuita de mitigar é o **Firebase App Check** (Console do Firebase → App Check → ativar com reCAPTCHA v3, gratuito, não exige plano Blaze) — ele verifica que as requisições vêm do seu site de verdade, não de scripts externos. Ainda não está configurado neste projeto.
+| Dia | Horário |
+|---|---|
+| Segunda a sexta-feira | 07:00 às 20:00 |
+| Sábado | 07:30 às 15:00 |
+| Domingo | Fechado |
 
-**As chaves do Firebase em `src/lib/firebase.js`** (`apiKey`, `projectId` etc.) são públicas por natureza — todo site com Firebase expõe elas no navegador, e isso é esperado e documentado pela própria Firebase. Quem protege os dados de verdade são as regras do Firestore (`firestore.rules`), não o segredo dessas chaves. Não há nenhuma chave secreta (de servidor, de pagamento, etc.) no código deste projeto.
+---
+
+## Desenvolvedor
+
+Desenvolvido por José Diogo.
+
+[jose-diogo.vercel.app](https://jose-diogo.vercel.app/)
