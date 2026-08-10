@@ -7,8 +7,11 @@ service cloud.firestore {
       // Qualquer pessoa pode LER as avaliações (aparecem públicas na Home)
       allow read: if true;
 
-      // Qualquer pessoa pode CRIAR uma avaliação, desde que os dados sejam válidos
+      // Qualquer pessoa pode CRIAR uma avaliação, desde que os dados sejam
+      // válidos e contenham SOMENTE os campos esperados (nada extra).
       allow create: if
+        request.resource.data.keys().hasOnly(['name', 'rating', 'comment', 'photo', 'createdAt']) &&
+
         request.resource.data.name is string &&
         request.resource.data.name.size() > 0 &&
         request.resource.data.name.size() <= 60 &&
@@ -22,10 +25,16 @@ service cloud.firestore {
         request.resource.data.rating <= 5 &&
 
         (
+          !('photo' in request.resource.data) ||
           request.resource.data.photo == null ||
           (request.resource.data.photo is string && request.resource.data.photo.size() < 300000)
-        );
+        ) &&
 
+        // createdAt precisa ser exatamente a hora do servidor no momento do
+        // envio — impede que alguém forje uma data passada ou futura.
+        request.resource.data.createdAt == request.time;
+
+      // Ninguém pode EDITAR avaliações pelo site.
       allow update: if false;
 
       allow delete: if request.auth != null;

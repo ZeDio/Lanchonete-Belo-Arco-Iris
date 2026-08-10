@@ -394,3 +394,19 @@ Existe uma página escondida (não aparece em nenhum menu do site) só pra você
 ```
 https://lanchonete-belo-arco-iris.vercel.app/gerenciar-avaliacoes
 ```
+
+## 🔒 Segurança — riscos conhecidos e aceitos
+
+Esta seção documenta decisões de segurança tomadas conscientemente, para referência futura.
+
+**A exclusão de avaliações não usa login real, por escolha.** A página `/gerenciar-avaliacoes` autentica anonimamente (sem pedir senha) só para liberar a permissão de excluir nas regras do Firestore. Isso tem uma limitação importante: como o login anônimo fica disponível pro site inteiro, **qualquer visitante que abra o DevTools do navegador na página principal também consegue se autenticar anonimamente e excluir avaliações** — não é preciso nem descobrir a URL escondida. Ou seja, a segurança real aqui é baixa; a URL escondida é só uma conveniência de acesso, não uma trava.
+
+- **Por que foi mantido assim**: a alternativa correta (login de e-mail/senha só para o proprietário, com uma *custom claim* de admin) foi oferecida e conscientemente recusada, para não ter tela de login em lugar nenhum do site.
+- **Como reduzir o risco no dia a dia**: não compartilhe o link de `/gerenciar-avaliacoes` publicamente; se notar avaliações sumindo sem explicação, isso pode indicar abuso dessa brecha.
+- **Se um dia quiser corrigir de vez**: é só pedir — a mudança é adicionar um login de e-mail/senha simples (só nessa página) e trocar a regra do Firestore para exigir uma *custom claim* de admin em vez de "qualquer sessão anônima". Não afeta o resto do site (visitantes continuam sem login para tudo).
+
+**Criação de avaliações (`allow create`)** exige que os dados tenham exatamente os campos esperados (`name`, `rating`, `comment`, `photo`, `createdAt`) — nenhum campo extra é aceito — e que `createdAt` seja sempre a hora real do servidor (impede datas forjadas).
+
+**Não há proteção contra spam automatizado** (bots enviando avaliações em massa). Se isso um dia for um problema, a forma gratuita de mitigar é o **Firebase App Check** (Console do Firebase → App Check → ativar com reCAPTCHA v3, gratuito, não exige plano Blaze) — ele verifica que as requisições vêm do seu site de verdade, não de scripts externos. Ainda não está configurado neste projeto.
+
+**As chaves do Firebase em `src/lib/firebase.js`** (`apiKey`, `projectId` etc.) são públicas por natureza — todo site com Firebase expõe elas no navegador, e isso é esperado e documentado pela própria Firebase. Quem protege os dados de verdade são as regras do Firestore (`firestore.rules`), não o segredo dessas chaves. Não há nenhuma chave secreta (de servidor, de pagamento, etc.) no código deste projeto.
