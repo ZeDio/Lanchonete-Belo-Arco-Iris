@@ -35,6 +35,16 @@
           "image": "/assets/menu/contra-file-prato-feito.jpg"
         },
         {
+          "name": "Calabresa Fresca, Ovo, Arroz, Feijão, Fritas e Salada",
+          "price": 25.0,
+          "image": "/assets/menu/calabresa-fresca-prato-feito.jpg"
+        },
+        {
+          "name": "Calabresa Defumada, Ovo, Arroz, Feijão, Fritase Salada",
+          "price": 25.0,
+          "image": "/assets/menu/calabresa-defumada-prato-feito.jpg"
+        },
+        {
           "name": "Parmegiana, Arroz e Fritas",
           "price": 36.0,
           "image": "/assets/menu/parmegiana-prato-feito.jpg"
