@@ -8,6 +8,9 @@ import {
   limit,
   onSnapshot,
   serverTimestamp,
+  getAggregateFromServer,
+  count,
+  average as avgAggregate,
 } from 'firebase/firestore'
 import { FaCamera, FaTimes } from 'react-icons/fa'
 import { db } from '../../lib/firebase.js'
@@ -20,19 +23,12 @@ const COMMENT_MAX = 500
 const NAME_MAX = 60
 const PAGE_SIZE = 5
 
-function formatDate(timestamp) {
-  if (!timestamp?.toDate) return ''
-  return timestamp.toDate().toLocaleDateString('pt-BR', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-  })
-}
-
 export default function Reviews() {
   const [reviews, setReviews] = useState([])
   const [loadingList, setLoadingList] = useState(true)
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
+  const [totalCount, setTotalCount] = useState(null)
+  const [avgRating, setAvgRating] = useState(null)
 
   const [name, setName] = useState('')
   const [rating, setRating] = useState(0)
@@ -44,7 +40,7 @@ export default function Reviews() {
   const [activePhoto, setActivePhoto] = useState(null)
 
   useEffect(() => {
-    const q = query(collection(db, 'reviews'), orderBy('createdAt', 'desc'), limit(50))
+    const q = query(collection(db, 'reviews'), orderBy('createdAt', 'desc'), limit(500))
     const unsubscribe = onSnapshot(
       q,
       (snapshot) => {
@@ -56,9 +52,30 @@ export default function Reviews() {
     return unsubscribe
   }, [])
 
-  const average = reviews.length
+  async function refreshStats() {
+    try {
+      const snapshot = await getAggregateFromServer(collection(db, 'reviews'), {
+        totalCount: count(),
+        avg: avgAggregate('rating'),
+      })
+      setTotalCount(snapshot.data().totalCount)
+      const avg = snapshot.data().avg
+      setAvgRating(avg === null ? null : avg.toFixed(1))
+    } catch {
+      // se a agregação falhar por qualquer motivo, a lista carregada
+      // (até 500 avaliações) ainda serve como contagem/média de reserva
+    }
+  }
+
+  useEffect(() => {
+    refreshStats()
+  }, [])
+
+  const fallbackAverage = reviews.length
     ? (reviews.reduce((sum, r) => sum + (r.rating || 0), 0) / reviews.length).toFixed(1)
     : null
+  const displayAverage = avgRating ?? fallbackAverage
+  const displayCount = totalCount ?? reviews.length
 
   async function handlePhotoChange(e) {
     const file = e.target.files?.[0]
@@ -103,6 +120,7 @@ export default function Reviews() {
       setPhoto(null)
       setSuccess(true)
       setTimeout(() => setSuccess(false), 5000)
+      refreshStats()
     } catch (err) {
       setError('Não foi possível enviar sua avaliação. Tente novamente em instantes.')
     } finally {
@@ -217,15 +235,15 @@ export default function Reviews() {
           >
             <div className={styles.listHeader}>
               <div className={styles.avgWrap}>
-                {average && (
+                {displayAverage && (
                   <>
-                    <span className={styles.avgValue}>{average}</span>
-                    <StarDisplay rating={Math.round(Number(average))} />
+                    <span className={styles.avgValue}>{displayAverage}</span>
+                    <StarDisplay rating={Math.round(Number(displayAverage))} />
                   </>
                 )}
               </div>
-              {reviews.length > 0 && (
-                <span className={styles.avgCount}>{reviews.length} avaliação(ões)</span>
+              {displayCount > 0 && (
+                <span className={styles.avgCount}>{displayCount} avaliação(ões)</span>
               )}
             </div>
 
@@ -258,7 +276,6 @@ export default function Reviews() {
                   <div className={styles.cardBody}>
                     <div className={styles.cardHeader}>
                       <span className={styles.cardName}>{r.name}</span>
-                      <span className={styles.cardDate}>{formatDate(r.createdAt)}</span>
                     </div>
                     <StarDisplay rating={r.rating} />
                     <p className={styles.cardComment} style={{ marginTop: 8 }}>

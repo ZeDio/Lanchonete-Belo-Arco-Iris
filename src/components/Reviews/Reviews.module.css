@@ -217,11 +217,6 @@
   color: var(--color-gray-900);
 }
 
-.cardDate {
-  font-size: 0.78rem;
-  color: var(--color-gray-600);
-}
-
 .cardComment {
   font-size: 0.92rem;
   color: var(--color-gray-600);
