@@ -382,7 +382,7 @@
             },
             {
               "name": "Refri Lata",
-              "price": 7.0
+              "price": 8.0
             },
             {
               "name": "Coca-Cola 600ml",
@@ -390,11 +390,11 @@
             },
             {
               "name": "Coca-Cola 1l",
-              "price": 12.0
+              "price": 13.0
             },
             {
               "name": "Coca-Cola 2l",
-              "price": 18.0
+              "price": 20.0
             },
             {
               "name": "Guaraná 600ml",
@@ -402,19 +402,19 @@
             },
             {
               "name": "Guaraná 1l",
-              "price": 10.0
+              "price": 11.0
             },
             {
               "name": "Guaraná 1,5l",
-              "price": 13.0
+              "price": 15.0
             },
             {
               "name": "Tubaína / Cotuba 600ml",
-              "price": 7.0
+              "price": 8.0
             },
             {
               "name": "Tubaína / Cotuba 2l",
-              "price": 13.0
+              "price": 15.0
             },
             {
               "name": "Sucos Lata Del Valle",
@@ -434,15 +434,15 @@
             },
             {
               "name": "H2O",
-              "price": 7.0
+              "price": 8.0
             },
             {
               "name": "Água 500ml",
-              "price": 4.0
+              "price": 5.0
             },
             {
               "name": "Água com Gás 500ml",
-              "price": 5.0
+              "price": 6.0
             }
           ]
         }
